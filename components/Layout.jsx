@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-export default ({ children, title = 'Malaysians Who Make' }) => (
+export default ({ children }) => (
   <div>
     <Head>
-      <title>{title}</title>
+      <title>Malaysians Who Make</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
@@ -29,6 +29,6 @@ export default ({ children, title = 'Malaysians Who Make' }) => (
 
     {children}
 
-    <footer></footer>
+    <footer>    </footer>
   </div>
 )

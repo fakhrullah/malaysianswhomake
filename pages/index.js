@@ -1,10 +1,10 @@
 import Layout from '../components/Layout'
-import MakerList from '../components/Maker'
+import MakerList from '../components/MakerCard'
 
 const Tabletop = require('tabletop');
 
 function Home(props) {
-  let { makerName } = props;
+  let { makerDirectory } = props;
   return (
     <Layout>
       <div className="hero">
@@ -14,8 +14,8 @@ function Home(props) {
           fames ac turpis egestas.
         </h2>
       </div>
-      <div>
-        <MakerList makerName={makerName} />
+      <div className="grid grid-cols-5 gap-2">
+        <div className="col-span-1"><MakerList makerDirectory={makerDirectory} /></div>
       </div>
     </Layout> 
   )
@@ -35,7 +35,8 @@ export async function getServerSideProps() {
   const ssData = await getData();
   return {
     props: {
-      makerName: ssData.directory.elements
+      makerDirectory: ssData.directory.elements,
+      makerExpertise: ssData.expertise.elements
     }
   };
 }
