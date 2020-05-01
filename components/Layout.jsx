@@ -8,8 +8,8 @@ export default ({ children }) => (
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <header>
-        <nav className="navbar pt-5 pl-12 pr-12">
+    <header className="sticky top-0">
+        <nav className="navbar pt-5 pl-12 pr-12 pb-4">
         <div className="w-1/5 h-18 align-middle">
             <Link href="/">
             <a className="text-xxl no-underline">🇲🇾</a>

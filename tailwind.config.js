@@ -5,7 +5,8 @@ module.exports = {
       'primary': '#202020',
       'transparent': 'transparent',
       'white': '#FFFFFF',
-      'dark': '#202020'
+      'dark': '#202020',
+      'lightgray': '#404040'
     },
     fontFamily: {
       'sans': '"Work Sans", Arial, sans-serif',
