@@ -11,6 +11,7 @@ module.exports = {
       'sans': '"Work Sans", Arial, sans-serif',
     },
     fontSize: {
+      's': '0.87rem',
       'base': '1rem',
       'xl': '2rem',
       'xxl': '2.8rem'

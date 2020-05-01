@@ -14,8 +14,9 @@ function Home(props) {
           fames ac turpis egestas.
         </h2>
       </div>
-      <div className="grid grid-cols-5 gap-2">
-        <div className="col-span-1"><MakerList makerDirectory={makerDirectory} /></div>
+      <div className="grid grid-cols-5 gap-8 pl-12 pr-12 pt-8">
+        <div className="col-span-1">Filter by</div>
+        <div className="col-span-4"><MakerList makerDirectory={makerDirectory} /></div>
       </div>
     </Layout> 
   )

@@ -4,10 +4,11 @@ import Ic_Instagram from '../src/Ic_Instagram';
 
 const MakerCard = ({ directory }) => {
   return (
-    <div className="mb-10">
-      <div className="mb-0.75 font-semibold">{directory.name}</div>
-      <div className="mb-0.75"><Ic_Location/>{directory.location}</div>
-      <div>{directory.biography}</div>
+    <div>
+      <div className="pb-0.75 font-semibold">{directory.name}</div>
+      <div className="text-s inline align-middle"><Ic_Location/>{directory.location}</div>
+      <div className="pt-2 text-s">{directory.biography}</div>
+      <div className="pt-2"><Ic_Website/>        <Ic_Instagram/></div>
     </div>
   )
 }
@@ -15,7 +16,7 @@ const MakerCard = ({ directory }) => {
 const MakerList = ({ makerDirectory }) => {
     let makerList = makerDirectory.sort();
     return (
-        <div>
+        <div className="grid grid-cols-4 gap-8 row-gap-8">
           {
             makerList.map( (makerDirectory, index) => (
                 <MakerCard key={index} directory={makerDirectory} />
