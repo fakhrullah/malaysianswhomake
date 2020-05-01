@@ -1,3 +1,17 @@
-.btn-blue {
-  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+.btn {
+  @apply font-semibold py-2 px-4 rounded;
+}
+
+.btn-white {
+  @apply bg-transparent;
+  @apply text-white;
+  @apply border;
+  @apply border-white;
+}
+
+.btn-white:hover {
+  @apply bg-white; 
+  @apply text-dark; 
+  @apply border;
+  @apply border-white; 
 }
