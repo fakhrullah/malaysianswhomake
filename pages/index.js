@@ -8,7 +8,7 @@ const Tabletop = require('tabletop');
 const listingsPerPage = 12;
 
 function Home(props) {
-  let { makerDirectory, makerExpertise } = props;
+  let { makerDirectory, expertiseList } = props;
 
   //Pagination
   const numberOfListings = makerDirectory.length;
@@ -30,7 +30,7 @@ function Home(props) {
     </div>
 
       <div className="grid grid-cols-5 gap-8 pl-12 pr-12 pt-10">
-        <FilterList makerExpertise={makerExpertise}/>
+        <FilterList expertiseList={expertiseList}/>
         <div className="col-span-4">
           <MakerList makerDirectory={makerDirectory} />
           <Pagination numberOfPages={numberOfPages} setPagination={setPagination} pagination={pagination} />
@@ -55,7 +55,7 @@ export async function getServerSideProps() {
   return {
     props: {
       makerDirectory: ssData.directory.elements,
-      makerExpertise: ssData.filters.elements
+      expertiseList: ssData.filters.elements
     }
   };
 }
