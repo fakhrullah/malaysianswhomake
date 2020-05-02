@@ -11,9 +11,7 @@ export default ({ children }) => (
     <header className="sticky top-0">
         <nav className="navbar pt-5 pl-12 pr-12 pb-4">
         <div className="w-1/5 h-18 align-middle">
-            <Link href="/">
-            <a className="text-xxl no-underline">🇲🇾</a>
-            </Link> 
+            <Link href="/"><a className="text-xxl no-underline">🇲🇾</a></Link> 
         </div>
         <div className="w-3/5 h-18 align-middle">
             <h1 className="title">

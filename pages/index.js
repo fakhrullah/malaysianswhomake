@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '../components/Layout'
 import MakerList from '../components/MakerList'
-import FilterList from '../components/Filters'
-import Pagination from '../components/Pagination';
 
 const Tabletop = require('tabletop');
 const listingsPerPage = 12;
@@ -20,22 +18,16 @@ function Home(props) {
 
   return (
     <Layout>
-
-    <div className="hero">
-        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Duis ut diam quam nulla porttitor massa. Senectus et netus et malesuada 
-          fames ac turpis egestas.
-        </h2>
-    </div>
-
-      <div className="grid grid-cols-5 gap-8 pl-12 pr-12 pt-10">
-        <FilterList expertiseList={expertiseList}/>
-        <div className="col-span-4">
-          <MakerList makerDirectory={makerDirectory} />
-          <Pagination numberOfPages={numberOfPages} setPagination={setPagination} pagination={pagination} />
+        <div className="hero">
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Duis ut diam quam nulla porttitor massa. Senectus et netus et malesuada 
+              fames ac turpis egestas.
+            </h2>
         </div>
-      </div>
+        <div>
+            <MakerList makerDirectory={makerDirectory} expertiseList={props.expertiseList} pagination={pagination} setPagination={setPagination} numberOfPages={numberOfPages}/>
+        </div>
     </Layout> 
   )
 }
