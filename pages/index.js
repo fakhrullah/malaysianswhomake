@@ -3,12 +3,12 @@ import Layout from '../components/Layout'
 import MakerList from '../components/MakerList'
 
 const Tabletop = require('tabletop');
-const listingsPerPage = 12;
 
 function Home(props) {
   let { makerDirectory, expertiseList } = props;
 
   //Pagination
+  const listingsPerPage = 12;
   const numberOfListings = makerDirectory.length;
   const [pagination, setPagination] = useState(0);
   let numberOfPages = Math.ceil(numberOfListings / listingsPerPage);
