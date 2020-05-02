@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/router'
 import Layout from '../components/Layout'
 import MakerList from '../components/MakerList'
 
@@ -6,6 +7,46 @@ const Tabletop = require('tabletop');
 
 function Home(props) {
   let { makerDirectory, expertiseList } = props;
+  const router = useRouter()
+  const { e } = router.query
+
+  //Define the initial expertise and its states
+  let expertiseListInitialState = []
+  expertiseList.map(e => {
+      let expertise = {
+          selected: true,
+          id: e.id,
+          name: e.expertise
+      }
+      expertiseListInitialState.push(expertise)
+  })
+  
+  //If there's a expertise selected, put the initial expertise state as only that one true and the rest false.
+  if (e) {
+    expertiseListInitialState = expertiseListInitialState.map(initialE => {
+          if (initialE.name !== e) {
+              return (
+                  {
+                      selected: !initialE.selected,
+                      id: initialE.id,
+                      name: initialE.expertise
+                  }
+              )
+          } else {
+              return (
+                  initialE
+              )
+          }
+      })
+  }
+
+  //Filter by Expertise
+  const [expertiseFilter, setExpertiseFilter] = useState(expertiseListInitialState);
+
+  let selectedExpertise = expertiseFilter.filter(expertise => expertise.selected === true).map(expertise => expertise.name);
+  makerDirectory = makerDirectory.filter(maker => {
+      return selectedExpertise.includes(maker.expertise)
+  })  
 
   //Pagination
   const listingsPerPage = 12;
@@ -26,7 +67,7 @@ function Home(props) {
             </h2>
         </div>
         <div>
-            <MakerList makerDirectory={makerDirectory} expertiseList={props.expertiseList} pagination={pagination} setPagination={setPagination} numberOfPages={numberOfPages}/>
+            <MakerList makerDirectory={makerDirectory} expertiseList={props.expertiseList} expertiseFilter={expertiseFilter} setExpertiseFilter={setExpertiseFilter} pagination={pagination} setPagination={setPagination} numberOfPages={numberOfPages}/>
         </div>
     </Layout> 
   )
