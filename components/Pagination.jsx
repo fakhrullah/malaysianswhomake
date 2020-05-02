@@ -2,7 +2,7 @@ const Pagination = ({ numberOfPages, setPagination, pagination }) => {
     let pages = Array.from(Array(numberOfPages).keys())
 
     return (
-      <div className="py-2 my-2">
+      <div className="py-12">
         <nav className="block">
           <ul className="flex pl-0 rounded list-none flex-wrap">
             {
@@ -18,7 +18,7 @@ const Pagination = ({ numberOfPages, setPagination, pagination }) => {
                         <button aria-label="Next Page" 
                         onClick={() => { setPagination(page); 
                           window.scrollTo({ top: 0, behavior: 'smooth' }); }} 
-                        className={`${selected} text-base font-regular flex w-8 h-8 mx-1 p-0 relative items-center justify-center leading-tight relative`}>
+                        className={`${selected} text-base font-regular flex w-4 h-8 mr-6 p-0 relative items-center justify-center leading-tight relative`}>
                             {page + 1}
                         </button>
                     </li>

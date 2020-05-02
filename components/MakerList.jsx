@@ -18,8 +18,8 @@ function MakerList({ makerDirectory, expertiseList, expertiseFilter, setExpertis
                     <MakerCard key={index} directory={directory} />
                 ))
               }
-              <Pagination numberOfPages={numberOfPages} setPagination={setPagination} pagination={pagination} />
             </div>
+            <Pagination numberOfPages={numberOfPages} setPagination={setPagination} pagination={pagination} />
           </div>
       </div>
     )
