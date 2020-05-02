@@ -15,8 +15,8 @@ function Home(props) {
   expertiseList.map(e => {
       let expertise = {
           selected: true,
-          id: e.id,
-          name: e.expertise
+          index: e.index,
+          expertise: e.expertise
       }
       expertiseListInitialState.push(expertise)
   })
@@ -24,12 +24,12 @@ function Home(props) {
   //If there's a expertise selected, put the initial expertise state as only that one true and the rest false.
   if (e) {
     expertiseListInitialState = expertiseListInitialState.map(initialE => {
-          if (initialE.name !== e) {
+          if (initialE.expertise !== e) {
               return (
                   {
                       selected: !initialE.selected,
-                      id: initialE.id,
-                      name: initialE.expertise
+                      index: initialE.index,
+                      expertise: initialE.expertise
                   }
               )
           } else {
@@ -43,9 +43,9 @@ function Home(props) {
   //Filter by Expertise
   const [expertiseFilter, setExpertiseFilter] = useState(expertiseListInitialState);
 
-  let selectedExpertise = expertiseFilter.filter(expertise => expertise.selected === true).map(expertise => expertise.name);
-  makerDirectory = makerDirectory.filter(maker => {
-      return selectedExpertise.includes(maker.expertise)
+  let selectedExpertise = expertiseFilter.filter(expertise => expertise.selected === true).map(expertise => expertise.expertise);
+  makerDirectory = makerDirectory.filter(directory => {
+      return selectedExpertise.includes(directory.expertise)
   })  
 
   //Pagination
