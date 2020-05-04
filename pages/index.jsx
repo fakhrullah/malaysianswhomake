@@ -1,15 +1,10 @@
 import React from "react";
-import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import MakerList from "../components/MakerList";
 
 const Tabletop = require("tabletop");
 
-function Home(props) {
-  let { makerDirectory } = props;
-  const router = useRouter();
-  const { e } = router.query;
-
+function Home({ makerDirectory, expertiseList }) {
   return (
     <Layout>
       <div className="hero">
@@ -23,7 +18,7 @@ function Home(props) {
       <div>
         <MakerList
           makerDirectory={makerDirectory}
-          expertiseList={props.expertiseList}
+          expertiseList={expertiseList}
         />
       </div>
     </Layout>

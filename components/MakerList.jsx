@@ -5,30 +5,32 @@ import MakerCard from "../components/MakerCard";
 import FilterList from "../components/Filters";
 
 function MakerList({ makerDirectory, expertiseList }) {
-  const [activeExpertise, setActiveExpertise] = useState("");
+  const [activeExpertises, setActiveExpertises] = useState([]);
 
-  function onChange(expertise) {
-    setActiveExpertise(expertise);
+  function onFilterChange(expertise) {
+    setActiveExpertises(
+      activeExpertises.includes(expertise)
+        ? activeExpertises.filter((e) => e !== expertise)
+        : activeExpertises.concat(expertise)
+    );
+    setCurrentPage(0);
   }
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const onPageChange = (page) => {
-    setCurrentPage(page);
-  };
 
   let makerList = makerDirectory
     .filter(
       (maker) =>
-        activeExpertise.length === 0 || maker.expertise === activeExpertise
+        activeExpertises.length === 0 ||
+        activeExpertises.includes(maker.expertise)
     )
     .sort();
 
-  let makersToShow = chunk(makerList, PER_PAGE)[currentPage - 1] || [];
+  const [currentPage, setCurrentPage] = useState(0);
+  let makersToShow = chunk(makerList, PER_PAGE)[currentPage] || [];
 
   return (
     <div className="grid grid-cols-5 gap-8 pl-12 pr-12 pt-10">
       <div>
-        <FilterList onChange={onChange} expertiseList={expertiseList} />
+        <FilterList onChange={onFilterChange} expertiseList={expertiseList} />
       </div>
       <div className="col-span-4">
         <div className="grid grid-cols-4 gap-8 row-gap-12">
@@ -36,7 +38,11 @@ function MakerList({ makerDirectory, expertiseList }) {
             <MakerCard key={index} directory={directory} />
           ))}
         </div>
-        <Pagination makerDirectory={makerList} onChange={onPageChange} />
+        <Pagination
+          currentPage={currentPage}
+          makerDirectory={makerList}
+          onChange={setCurrentPage}
+        />
       </div>
     </div>
   );
