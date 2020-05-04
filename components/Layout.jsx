@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import Head from "next/head";
+import Link from "next/link";
 
 export default ({ children }) => (
   <div>
@@ -9,24 +9,32 @@ export default ({ children }) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <header className="sticky top-0">
-        <nav className="navbar pt-5 pl-12 pr-12 pb-4">
+      <nav className="navbar pt-2 pl-12 pr-12 pb-1">
         <div className="w-1/5 h-18 align-middle">
-            <Link href="/"><a className="text-xxl no-underline">🇲🇾</a></Link> 
+          <Link href="/">
+            <a className="text-xxl no-underline">🇲🇾</a>
+          </Link>
         </div>
         <div className="w-3/5 h-18 align-middle">
-            <h1 className="title">
-            <Link href="/"><a>Malaysians Who Make</a></Link>
-            </h1>
+          <h1 className="title">
+            <Link href="/">
+              <a>Malaysians Who Make</a>
+            </Link>
+          </h1>
         </div>
         <div className="w-1/5 h-18 align-middle">
-            <a href="/" className="btn no-underline">About</a>
-            <a href="/" className="btn btn-white ml-4 no-underline">Nominate</a>
+          <a href="/" className="btn no-underline">
+            About
+          </a>
+          <a href="/" className="btn btn-white ml-4 no-underline">
+            Nominate
+          </a>
         </div>
-        </nav>
+      </nav>
     </header>
 
     {children}
 
-    <footer>    </footer>
+    <footer> </footer>
   </div>
-)
+);

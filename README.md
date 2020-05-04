@@ -1,2 +1,2 @@
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/zeit/next.js/tree/canary/examples/with-tailwindcss)
+Credits to Vincent Loh (vinz) for helping fix the code!
+This project wouldn't be up and running if it wasn't for him :)
