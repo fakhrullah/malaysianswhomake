@@ -20,9 +20,12 @@ function MakerList({ makerDirectory, expertiseList }) {
     .filter(
       (maker) =>
         activeExpertises.length === 0 ||
-        activeExpertises.includes(maker.expertise)
+        activeExpertises.includes(maker.expertise) ||
+        activeExpertises.includes(maker.position)
     )
     .sort();
+
+  console.log(expertiseList);
 
   const [currentPage, setCurrentPage] = useState(0);
   let makersToShow = chunk(makerList, PER_PAGE)[currentPage] || [];
