@@ -25,8 +25,6 @@ function MakerList({ makerDirectory, expertiseList }) {
     )
     .sort();
 
-  console.log(expertiseList);
-
   const [currentPage, setCurrentPage] = useState(0);
   let makersToShow = chunk(makerList, PER_PAGE)[currentPage] || [];
 
