@@ -14,7 +14,6 @@
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",
     "autoprefixer": "^9.7.6",
-    "fsevents": "^1.2.12",
     "next": "^9.3.6",
     "next-images": "^1.4.0",
     "postcss-import": "^12.0.1",
