@@ -4,23 +4,24 @@ import MakerList from "../components/MakerList";
 
 const Tabletop = require("tabletop");
 
-function Home({
-  makerDirectory,
-  expertiseList
-}) {
-  return ( < Layout >
-    <div className = "hero" >
-    <h2 >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua.Duis ut
-    diam quam nulla porttitor massa.Senectus et netus et malesuada fames ac turpis egestas. 
-    </h2> </div>
-    <div >
-    <MakerList makerDirectory = {makerDirectory}
-    expertiseList = {
-      expertiseList
-    }
-    /> </div> </Layout>
+function Home({ makerDirectory, expertiseList }) {
+  return (
+    <Layout>
+      <div className="hero">
+        <h2>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis ut
+          diam quam nulla porttitor massa. Senectus et netus et malesuada fames
+          ac turpis egestas.
+        </h2>
+      </div>
+      <div>
+        <MakerList
+          makerDirectory={makerDirectory}
+          expertiseList={expertiseList}
+        />
+      </div>
+    </Layout>
   );
 }
 
