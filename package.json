@@ -6,6 +6,11 @@
     "build": "next build",
     "start": "next start"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RachelHow/malaysianswhomake"
+  },
+  "license": "MIT",
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",
     "autoprefixer": "^9.7.6",
