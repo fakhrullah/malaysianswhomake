@@ -8,19 +8,19 @@ function Home({
   makerDirectory,
   expertiseList
 }) {
-  return ( < Layout >
-    <div className = "hero" >
-    <h2 >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua.Duis ut
-    diam quam nulla porttitor massa.Senectus et netus et malesuada fames ac turpis egestas. 
-    </h2> </div>
-    <div >
-    <MakerList makerDirectory = {makerDirectory}
-    expertiseList = {
-      expertiseList
-    }
-    /> </div> </Layout>
+  return (
+    <Layout>
+        <div className="hero pt-20 pb-6 md:pt-3.5 md:pb-4 sm:pt-48">
+            <h2>
+            A directory dedicated to showcase passionate Malaysian Makers.
+            If you'd like to request a feature, <u>let us know</u>.
+            </h2> 
+        </div>
+        <div className="container mx-auto">
+            <MakerList makerDirectory = {makerDirectory} 
+            expertiseList = {expertiseList}/>
+        </div>
+    </Layout>
   );
 }
 

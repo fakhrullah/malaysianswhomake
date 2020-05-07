@@ -6,39 +6,40 @@ import Ic_Twitter from "../src/Ic_Twitter";
 
 const MakerCard = ({ directory }) => {
   return (
-    <div>
-      <div className="h-48">
+    <div className="max-w-14 sm:max-w-48">
+      <div className="relative h-48">
         {directory.image ? (
           <img
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover makerImage"
             src={directory.image}
             alt="img"
           />
         ) : null}
       </div>
-      <div className="pt-2 pb-0.75 font-semibold">{directory.name}</div>
-      <div className="text-s inline align-middle">
-        <Ic_Location />
-        {directory.location}
+      <div className="pt-2 pb-0.75 font-semibold md:text-s sm:text-24">
+        {directory.name}
       </div>
-      <div className="pt-2 text-s pb-4">{directory.biography}</div>
+      <div className="text-s md:text-xs sm:text-l inline align-middle location-icon">
+        <Ic_Location/> {directory.location}
+      </div>
+      <div className="text-s md:text-xs sm:text-l pt-2 pb-4">{directory.biography}</div>
       <div>
         {directory.website ? (
-          <span className="inline mr-2">
+          <span className="inline mr-3 sm:mr-6 social-icon">
             <a href={directory.website}>
-              <Ic_Website />
+              <Ic_Website/>
             </a>
           </span>
         ) : null}
         {directory.instagram ? (
-          <span className="inline mr-2">
+          <span className="inline mr-3 sm:mr-6 social-icon">
             <a href={directory.instagram}>
               <Ic_Instagram />
             </a>
           </span>
         ) : null}
         {directory.twitter ? (
-          <span className="inline mr-2">
+          <span className="inline mr-3 sm:mr-6 social-icon">
             <a href={directory.twitter}>
               <Ic_Twitter />
             </a>

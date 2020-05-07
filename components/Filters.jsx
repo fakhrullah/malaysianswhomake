@@ -1,46 +1,44 @@
 import React from "react";
 
 const FilterList = ({ expertiseList, onChange = () => {} }) => (
-  <div>
-    <div className="col-span-1">
-      <div className="pb-8">
-        <h3 className="pb-4">Expertise</h3>
-        {expertiseList
-          .filter((expertise) => expertise.type === "exp")
-          .map((expertise, index) => (
-            <div className="mt-1" key={index}>
-              <label>
-                <input
-                  type="checkbox"
-                  className="form-checkbox h-4 w-4 mr-2 mb-2"
-                  index={index}
-                  onChange={() => onChange(expertise.expertise)}
-                />
-                <span>{expertise.expertise}</span>
-              </label>
-            </div>
-          ))}
-      </div>
-      <div className="pb-8">
-        <h3 className="pb-4">Position</h3>
-        {expertiseList
-          .filter((expertise) => expertise.type === "pos")
-          .map((expertise, index) => (
-            <div className="mt-1" key={index}>
-              <label>
-                <input
-                  type="checkbox"
-                  className="form-checkbox h-4 w-4 mr-2 mb-2"
-                  index={index}
-                  onChange={() => onChange(expertise.expertise)}
-                />
-                <span>{expertise.expertise}</span>
-              </label>
-            </div>
-          ))}
-      </div>
+    <div className="sticky top-6 h-screen overflow-y-scroll pb-10">
+        <div className="pb-6">
+          <h3 className="pb-2">Expertise</h3>
+          {expertiseList
+            .filter((expertise) => expertise.type === "exp")
+            .map((expertise, index) => (
+              <div key={index} className="pb-1">
+                <label>
+                  <input
+                    type="checkbox"
+                    className="form-checkbox h-3 w-3 mr-2"
+                    index={index}
+                    onChange={() => onChange(expertise.expertise)}
+                  />
+                  <span className="md:text-xs">{expertise.expertise}</span>
+                </label>
+              </div>
+            ))}
+        </div>
+        <div>
+          <h3 className="pb-2">Position</h3>
+          {expertiseList
+            .filter((expertise) => expertise.type === "pos")
+            .map((expertise, index) => (
+              <div key={index} className="pb-1">
+                <label>
+                  <input
+                    type="checkbox"
+                    className="form-checkbox h-3 w-3 mr-2"
+                    index={index}
+                    onChange={() => onChange(expertise.expertise)}
+                  />
+                  <span className="md:text-xs">{expertise.expertise}</span>
+                </label>
+              </div>
+            ))}
+        </div>
     </div>
-  </div>
 );
 
 export default FilterList;

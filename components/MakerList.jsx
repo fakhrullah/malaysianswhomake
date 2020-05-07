@@ -29,12 +29,12 @@ function MakerList({ makerDirectory, expertiseList }) {
   let makersToShow = chunk(makerList, PER_PAGE)[currentPage] || [];
 
   return (
-    <div className="grid grid-cols-5 gap-8 pl-12 pr-12 pt-10">
-      <div>
+    <div className="grid grid-cols-4 gap-10 pl-10 pr-10 mt-10 md:grid-cols-3 md:gap-4 sm:flex">
+      <div className="col-span-1 md:col-span-1 sm:hidden">
         <FilterList onChange={onFilterChange} expertiseList={expertiseList} />
       </div>
-      <div className="col-span-4">
-        <div className="grid grid-cols-4 gap-8 row-gap-12">
+      <div className="flex-row col-span-3 md:col-span-2 sm:flex-col sm:w-screen">
+        <div className="grid grid-cols-3 gap-8 row-gap-12 md:grid-cols-2 sm:grid-cols-1">
           {makersToShow.map((directory, index) => (
             <MakerCard key={index} directory={directory} />
           ))}

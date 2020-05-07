@@ -19,7 +19,7 @@ const Pagination = (props) => {
   ) : (
     <div className="py-12">
       <nav className="block">
-        <ul className="flex pl-0 rounded list-none flex-wrap">
+        <ul className="flex pl-0 rounded list-none flex-wrap sm:justify-center">
           {Array.from({ length: totalPages }).map((value, page) => (
             <li key={page}>
               <button
