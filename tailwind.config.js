@@ -4,8 +4,7 @@ module.exports = {
     screens: {
       'sm': {'max': '639px'},
       'md': {'min': '640px', 'max': '1023px'},
-      'lg': {'min': '1024px', 'max': '1279px'},
-      'xl': {'min': '1280px'},
+      'lg': {'min': '1024px'}
     },
     colors: {
       'primary': '#202020',
@@ -33,14 +32,16 @@ module.exports = {
       bold: 700,
     },
     inset: {
-      '6': '6rem'
+      '5': '5rem'
     },
     maxWidth: {
       '14': '14rem',
       '48': '48rem'
     },
     height: {
-      '28': '7rem'
+      '28': '7rem',
+      'imgmd': '11rem', //makerImage height
+      'imglg': '13rem'
     },
     extend: {},
   },

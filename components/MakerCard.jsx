@@ -7,10 +7,10 @@ import Ic_Twitter from "../src/Ic_Twitter";
 const MakerCard = ({ directory }) => {
   return (
     <div className="max-w-14 sm:max-w-48">
-      <div className="relative h-48">
+      <div className="h-full">
         {directory.image ? (
           <img
-            className="h-full w-full object-cover makerImage"
+            className="w-full h-imglg md:h-imgmd object-cover makerImage"
             src={directory.image}
             alt="img"
           />

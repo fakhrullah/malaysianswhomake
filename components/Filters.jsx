@@ -1,7 +1,7 @@
 import React from "react";
 
 const FilterList = ({ expertiseList, onChange = () => {} }) => (
-    <div className="sticky top-6 h-screen overflow-y-scroll pb-10">
+    <div className="sticky top-5 h-screen overflow-y-scroll pb-10">
         <div className="pb-6">
           <h3 className="pb-2">Expertise</h3>
           {expertiseList

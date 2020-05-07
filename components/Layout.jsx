@@ -9,7 +9,7 @@ export default ({ children }) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
 
-    <nav className="fixed z-10 flex-row header py-1 px-12 sm:inline-block sm:py-4">
+    <nav className="fixed z-10 flex-row header px-12 py-1 sm:inline-block sm:py-4">
         <div className="w-1/5 align-middle sm:w-full sm:text-center text-xxl md:text-xl">
           <a href="/">🇲🇾</a>
         </div>
@@ -33,16 +33,16 @@ export default ({ children }) => (
     {children}
 
     <footer>
-      <div className="grid grid-cols-3 px-12 pt-10 pb-6 md:px-10 md:pb-2 sm:block sm:px-2">
-        <div className="cols-span-1 text-s text-left md:text-xs sm:text-base sm:text-center">
+      <div className="grid grid-cols-3 px-12 py-8 md:px-10  sm:block sm:px-2">
+        <div className="cols-span-1 text-s text-left md:text-xs sm:text-base sm:pb-2 sm:text-center">
             © 2020 MalaysiansWhoMake
         </div>
-        <div className="cols-span-1 text-s text-center md:text-xs md:invisible sm:text-base sm:text-center">
+        <div className="cols-span-1 text-s text-center md:text-xs md:invisible sm:text-base sm:pb-2 sm:text-center">
             An open source initiative by 
             <a href="https://twitter.com/rachelhxw"
             className="font-semibold"> Rachel How</a>
         </div>
-        <div className="cols-span-1 text-s text-right md:text-xs sm:text-base sm:text-center">
+        <div className="cols-span-1 text-s text-right md:text-xs sm:text-base sm:pb-2 sm:text-center">
             Made with ❤️ in 🇲🇾
         </div>
       </div>

@@ -10,13 +10,7 @@ function Home({
 }) {
   return (
     <Layout>
-        <div className="hero pt-20 pb-6 md:pt-3.5 md:pb-4 sm:pt-48">
-            <h2>
-            A directory dedicated to showcase passionate Malaysian Makers.
-            If you'd like to request a feature, <u>let us know</u>.
-            </h2> 
-        </div>
-        <div className="container mx-auto">
+        <div className="container mx-auto py-24 sm:px-10 sm:pt-48">
             <MakerList makerDirectory = {makerDirectory} 
             expertiseList = {expertiseList}/>
         </div>
