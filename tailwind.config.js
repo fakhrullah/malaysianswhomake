@@ -33,7 +33,8 @@ module.exports = {
       bold: 700,
     },
     inset: {
-      '8': '8rem'
+      '8': '6rem',
+      '11': '11rem'
     },
     maxWidth: {
       '14': '14rem',
@@ -42,7 +43,8 @@ module.exports = {
     height: {
       '28': '7rem',
       'imgmd': '11rem', //makerImage height
-      'imglg': '13rem'
+      'imglg': '13rem',
+      'imgsm': '18rem'
     },
     extend: {},
   },

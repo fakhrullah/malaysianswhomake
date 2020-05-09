@@ -1,5 +1,5 @@
 const Ic_Logo = () => 
-    <svg width="365" height="53" viewBox="0 0 365 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="357" height="45" viewBox="0 0 365 53" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M-0.141357 19H4.63464L9.50664 28.84L14.3546 19H19.1306V35.824H15.2426L15.2186 25.168L10.9226 34.144H8.09064L3.77064 25.168V35.824H-0.141357V19Z" fill="#101010"/>
         <path d="M43.8704 6H48.2624V19.08H55.3904V22.824H43.8704V6Z" fill="#101010"/>
         <path d="M96.833 6L90.761 17.448V22.824H86.369V17.568L80.177 6H84.569L88.553 13.224L92.441 6H96.833Z" fill="#101010"/>

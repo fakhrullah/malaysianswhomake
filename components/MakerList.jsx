@@ -29,10 +29,13 @@ function MakerList({ makerDirectory, expertiseList }) {
   let makersToShow = chunk(makerList, PER_PAGE)[currentPage] || [];
 
   return (
-    <div className="grid grid-cols-4 gap-10 md:grid-cols-3 md:gap-4 sm:flex">
+    <div className="inline-grid grid-cols-4 gap-10 pb-16 md:grid-cols-3 md:gap-4 sm:flex">
       <div className="col-span-1 md:col-span-1 sm:hidden">
         <FilterList onChange={onFilterChange} expertiseList={expertiseList} />
       </div>
+      {/* <div className="fabfilter">
+        <button>Filter by</button>
+      </div> */}
       <div className="flex-row col-span-3 md:col-span-2 sm:flex-col sm:w-full">
         <div className="grid grid-cols-3 gap-8 row-gap-12 md:grid-cols-2 sm:grid-cols-1">
           {makersToShow.map((directory, index) => (

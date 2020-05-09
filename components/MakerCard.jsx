@@ -10,7 +10,7 @@ const MakerCard = ({ directory }) => {
       <div className="h-full">
         {directory.image ? (
           <img
-            className="w-full h-imglg md:h-imgmd object-cover makerImage"
+            className="w-full h-imglg md:h-imgmd sm:h-imgsm object-cover makerImage"
             src={directory.image}
             alt="img"
           />
