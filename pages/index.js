@@ -18,7 +18,7 @@ function Home({
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const spreadSheetUrl =
     "https://docs.google.com/spreadsheets/d/19LiipFiwT8-QypTMmCeJy40U15wwHULyeejczx5dUe0/edit?usp=sharing";
 
