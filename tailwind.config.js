@@ -6,15 +6,16 @@ module.exports = {
       'md': {'min': '640px', 'max': '1023px'},
       'lg': {'min': '1024px'}
     },
+    fontFamily: {
+      display: ['Karla', 'sans-serif'],
+      body: ['Karla', 'sans-serif']
+    },
     colors: {
       'primary': '#202020',
       'transparent': 'transparent',
       'white': '#FFFFFF',
       'dark': '#202020',
       'lightgray': '#404040'
-    },
-    fontFamily: {
-      'sans': '"Work Sans", Arial, sans-serif',
     },
     fontSize: {
       'xxs': '0.6875rem', //11px
@@ -28,11 +29,11 @@ module.exports = {
     },
     fontWeight: {
       normal: 400,
-      semibold: 600,
+      semibold: 700,
       bold: 700,
     },
     inset: {
-      '5': '5rem'
+      '9': '5rem'
     },
     maxWidth: {
       '14': '14rem',

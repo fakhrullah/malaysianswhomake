@@ -1,7 +1,13 @@
 import React from "react";
 
 const FilterList = ({ expertiseList, onChange = () => {} }) => (
-    <div className="sticky top-5 h-screen overflow-y-scroll pb-10">
+    <div className="sticky top-9 h-screen overflow-y-scroll pb-10">
+
+        <div className="font-semibold leading-5 pb-8">
+        Discover talented, passionate Malaysians who always strive 
+        to create and build stuff.
+        </div>
+
         <div className="pb-6">
           <h3 className="pb-2">Expertise</h3>
           {expertiseList
@@ -20,7 +26,7 @@ const FilterList = ({ expertiseList, onChange = () => {} }) => (
               </div>
             ))}
         </div>
-        <div>
+        {/* <div>
           <h3 className="pb-2">Position</h3>
           {expertiseList
             .filter((expertise) => expertise.type === "pos")
@@ -37,7 +43,7 @@ const FilterList = ({ expertiseList, onChange = () => {} }) => (
                 </label>
               </div>
             ))}
-        </div>
+        </div> */}
     </div>
 );
 
