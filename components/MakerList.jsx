@@ -29,7 +29,7 @@ function MakerList({ makerDirectory, expertiseList }) {
   let makersToShow = chunk(makerList, PER_PAGE)[currentPage] || [];
 
   return (
-    <div className="grid grid-cols-4 gap-10 px-10 md:px-0 md:grid-cols-3 md:gap-4 sm:flex sm:px-0">
+    <div className="grid grid-cols-4 gap-10 md:grid-cols-3 md:gap-4 sm:flex">
       <div className="col-span-1 md:col-span-1 sm:hidden">
         <FilterList onChange={onFilterChange} expertiseList={expertiseList} />
       </div>

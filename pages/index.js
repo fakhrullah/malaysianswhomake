@@ -10,7 +10,7 @@ function Home({
 }) {
   return (
     <Layout>
-        <div className="container mx-auto py-24 sm:px-10 sm:pt-48">
+        <div className="container mx-auto px-8 pt-32 sm:px-10 sm:pt-48">
             <MakerList makerDirectory = {makerDirectory} 
             expertiseList = {expertiseList}/>
         </div>

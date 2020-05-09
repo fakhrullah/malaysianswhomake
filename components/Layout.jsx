@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Ic_Logo from "../src/Ic_Logo";
 
 export default ({ children }) => (
   <div>
@@ -7,6 +8,7 @@ export default ({ children }) => (
       <title>Malaysians Who Make</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link rel="icon" href="/public/favicon.ico" />
       <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700" rel="stylesheet"/>
     </Head>
 
@@ -17,7 +19,9 @@ export default ({ children }) => (
 
         <div className="w-1/3 align-middle sm:w-full sm:text-center">
           <h1 className="title text-l md:text-base">
-            <a href="/">Malaysians Who Make</a>
+            <a href="/" id="Malaysians Who Make">
+              <Ic_Logo/>
+            </a>
           </h1>
         </div>
 
