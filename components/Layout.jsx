@@ -45,7 +45,7 @@ export default ({ children }) => (
     <footer>
       <div className="grid grid-cols-3 px-12 py-4 md:px-10 sm:block sm:px-2">
         <div className="cols-span-1 text-s text-left md:text-xs sm:text-base sm:pb-2 sm:text-center">
-            © 2020 MalaysiansWhoMake&nbsp; | &nbsp;<a href="https://twitter.com/malaysianswhomake" className="font-semibold">Twitter</a>
+            © 2020 MalaysiansWhoMake&nbsp; | &nbsp;<a href="https://twitter.com/malaysiansmake" className="font-semibold">Twitter</a>
         </div>
         
         <div className="cols-span-1 invisible">
