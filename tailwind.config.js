@@ -11,11 +11,10 @@ module.exports = {
       body: ['Karla', 'sans-serif']
     },
     colors: {
-      'primary': '#202020',
-      'transparent': 'transparent',
       'white': '#FFFFFF',
-      'dark': '#202020',
-      'lightgray': '#404040'
+      'dark': '#000',
+      'lightgray': '#404040',
+      'blue': '#010066'
     },
     fontSize: {
       'xxs': '0.6875rem', //11px
@@ -25,7 +24,7 @@ module.exports = {
       'l': '1.25rem', //20px
       '24': '1.5rem', //24px
       'xl': '2rem', //32px
-      'xxl': '2.8rem' //44px
+      'xxl': '2.25rem' //36px
     },
     fontWeight: {
       normal: 400,

@@ -45,13 +45,11 @@ export default ({ children }) => (
     <footer>
       <div className="grid grid-cols-3 px-12 py-4 md:px-10 sm:block sm:px-2">
         <div className="cols-span-1 text-s text-left md:text-xs sm:text-base sm:pb-2 sm:text-center">
-            © 2020 MalaysiansWhoMake
+            © 2020 MalaysiansWhoMake&nbsp; | &nbsp;<a href="https://twitter.com/malaysianswhomake" className="font-semibold">Twitter</a>
         </div>
         
-        <div className="cols-span-1 text-s text-center md:text-xs md:invisible sm:text-base sm:pb-2 sm:text-center">
-            An open source initiative by 
-            <a href="https://twitter.com/rachelhxw"
-            className="font-semibold"> Rachel How</a>
+        <div className="cols-span-1 invisible">
+            {/* nothing here  */}
         </div>
 
         <div className="cols-span-1 text-s text-right md:text-xs sm:text-base sm:pb-2 sm:text-center">
