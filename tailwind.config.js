@@ -33,7 +33,7 @@ module.exports = {
       bold: 700,
     },
     inset: {
-      '8': '6rem',
+      '8': '7rem',
       '11': '11rem'
     },
     maxWidth: {

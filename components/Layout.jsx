@@ -13,11 +13,11 @@ export default ({ children }) => (
     </Head>
 
     <nav className="fixed z-10 flex-row header px-12 py-6 md:inline-block sm:inline-block sm:py-10">
-        <div className="w-1/3 sm:w-full sm:text-center text-xxl md:text-xl">
+        <div className="w-1/3 sm:w-full">
             {/* nothing here  */}
         </div>
 
-        <div className="w-1/3 align-middle md:w-full md:text-center sm:w-full sm:text-center">
+        <div className="w-1/3 align-middle md:w-full md:text-center sm:w-full sm:flex sm:justify-center">
             <a href="/" id="Malaysians Who Make">
               <Ic_Logo/>
             </a>

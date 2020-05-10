@@ -59,6 +59,19 @@ svg {
   display: inline-block;
 }
 
+.checkboxframe {
+  display: flex;
+  flex-shrink: 0;
+  border: 1px solid #000000;
+  background-color: #fff;
+  width: 14px;
+  height: 14px;
+}
+
+input:checked + svg {
+  display:block;
+}
+
 .social-icon:hover circle{
   fill: #ffcc00;
 }
