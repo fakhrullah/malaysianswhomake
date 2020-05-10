@@ -3,6 +3,7 @@ import Ic_Location from "../src/Ic_Location";
 import Ic_Website from "../src/Ic_Website";
 import Ic_Instagram from "../src/Ic_Instagram";
 import Ic_Twitter from "../src/Ic_Twitter";
+import Ic_LinkedIn from "../src/Ic_LinkedIn";
 
 const MakerCard = ({ directory }) => {
   return (
@@ -42,6 +43,13 @@ const MakerCard = ({ directory }) => {
           <span className="inline mr-3 sm:mr-6 social-icon">
             <a href={directory.twitter}>
               <Ic_Twitter />
+            </a>
+          </span>
+        ) : null}
+        {directory.linkedin ? (
+          <span className="inline mr-3 sm:mr-6 social-icon">
+            <a href={directory.linkedin}>
+              <Ic_LinkedIn />
             </a>
           </span>
         ) : null}

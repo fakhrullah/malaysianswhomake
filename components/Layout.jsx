@@ -6,9 +6,14 @@ export default ({ children }) => (
   <div>
     <Head>
       <title>Malaysians Who Make</title>
+      <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <meta charSet="utf-8" />
+      <meta name="description"
+        content={`MalaysiansWhoMake is the place to discover talented, 
+        innovative makers, from artists to indie hackers.`}
+      />
+      <meta name="author" content="Rachel How"/>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <link rel="icon" href="/favicon.ico" />
       <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700" rel="stylesheet"/>
     </Head>
 
@@ -25,10 +30,10 @@ export default ({ children }) => (
 
         <div className="w-1/3 align-middle flex justify-end md:w-full md:justify-center 
         md:pt-8 sm:w-full sm:justify-center sm:pt-6">
-          <a href="/" className="btn font-semibold md:text-s">
+          <Link href="/about"><a className="btn font-semibold md:text-s">
             ABOUT
-          </a>
-          <a target="_blank" href="https://forms.gle/BLgLLaiG7U8vir2XA" 
+          </a></Link>
+          <a target="_blank" href="https://forms.gle/tGzbZJaden9ZCSZe7" 
           className="btn btn-solid font-semibold md:text-s">
             NOMINATE
           </a>
