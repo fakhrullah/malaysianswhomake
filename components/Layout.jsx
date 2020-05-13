@@ -22,14 +22,14 @@ export default ({ children }) => (
             {/* nothing here  */}
         </div>
 
-        <div className="w-1/3 align-middle md:w-full md:text-center sm:w-full sm:flex sm:justify-center">
-            <a href="/" id="Malaysians Who Make">
-              <Ic_Logo/>
+        <div className="w-1/3 align-middle text-center md:w-full sm:w-full sm:flex sm:justify-center">
+            <a href="/" className="font-bold text-24 md:text-l">
+              Malaysians Who Make
             </a>
         </div>
 
         <div className="w-1/3 align-middle flex justify-end md:w-full md:justify-center 
-        md:pt-8 sm:w-full sm:justify-center sm:pt-6">
+        md:pt-4 sm:w-full sm:justify-center sm:pt-6">
           <Link href="/about"><a className="btn font-semibold md:text-s">
             ABOUT
           </a></Link>

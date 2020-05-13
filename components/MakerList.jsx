@@ -4,6 +4,11 @@ import Pagination, { PER_PAGE } from "../components/Pagination";
 import MakerCard from "../components/MakerCard";
 import FilterList from "../components/Filters";
 
+// sort makers alphabetically
+// itemsArray.sort((a,b) => {
+//   return a.name > b.name;
+// });
+
 function MakerList({ makerDirectory, expertiseList }) {
   const [activeExpertises, setActiveExpertises] = useState([]);
 
@@ -23,7 +28,9 @@ function MakerList({ makerDirectory, expertiseList }) {
         activeExpertises.includes(maker.expertise) ||
         activeExpertises.includes(maker.position)
     )
-    .sort();
+    .sort((a,b) => {return a.name > b.name;});
+    
+  console.log(makerList);
 
   const [currentPage, setCurrentPage] = useState(0);
   let makersToShow = chunk(makerList, PER_PAGE)[currentPage] || [];
@@ -33,9 +40,11 @@ function MakerList({ makerDirectory, expertiseList }) {
       <div className="col-span-1 md:col-span-1 sm:hidden">
         <FilterList onChange={onFilterChange} expertiseList={expertiseList} />
       </div>
-      {/* <div className="fabfilter">
-        <button>Filter by</button>
-      </div> */}
+      {/* 
+        <div className="fabfilter">
+          <button>Filter by</button>
+        </div> 
+      */}
       <div className="flex-row col-span-3 md:col-span-2 sm:flex-col sm:w-full">
         <div className="grid grid-cols-3 gap-8 row-gap-12 md:grid-cols-2 sm:grid-cols-1">
           {makersToShow.map((directory, index) => (
