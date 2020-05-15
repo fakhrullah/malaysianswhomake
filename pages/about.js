@@ -6,8 +6,9 @@ function About() {
     <Layout>
       <div className="container mx-auto text-center px-24 py-32 md:px-8 md:py-48 sm:px-8 sm:py-48">
           <div className="pb-8 text-center">
-            <img src="https://images.unsplash.com/photo-1564506414752-a73fbe0c6b00">
-            </img>
+            <div className="flex justify-center">
+              <img src="https://i.ibb.co/7vWVZzV/cityimage.jpg"/>
+            </div>
             <span className="opacity-50 text-xs"><a href="https://unsplash.com/@seakei" target="_blank">Shot by CK Yeo on Unsplash</a></span>
           </div>
 
