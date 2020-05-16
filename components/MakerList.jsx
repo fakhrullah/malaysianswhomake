@@ -25,8 +25,8 @@ function MakerList({ makerDirectory, expertiseList }) {
     .filter(
       (maker) =>
         activeExpertises.length === 0 ||
-        activeExpertises.includes(maker.expertise) ||
-        activeExpertises.includes(maker.position)
+        activeExpertises.includes(maker.expertise1) ||
+        activeExpertises.includes(maker.expertise2)
     )
     .sort((a,b) => {return a.name > b.name;});
     
