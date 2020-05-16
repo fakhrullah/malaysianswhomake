@@ -31,11 +31,11 @@ export default ({ children }) => (
         <div className="w-1/3 align-middle flex justify-end md:w-full md:justify-center 
         md:pt-4 sm:w-full sm:justify-center sm:pt-6">
           <Link href="/about"><a className="btn font-semibold md:text-s">
-            ABOUT
+            About
           </a></Link>
           <a target="_blank" href="https://forms.gle/tGzbZJaden9ZCSZe7" 
-          className="btn btn-solid font-semibold md:text-s">
-            NOMINATE
+          className="btn btn-solid rounded font-semibold md:text-s">
+            Nominate
           </a>
         </div>
     </nav>

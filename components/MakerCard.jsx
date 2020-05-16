@@ -1,6 +1,7 @@
 import React from "react";
 import Ic_Location from "../src/Ic_Location";
 import Ic_Website from "../src/Ic_Website";
+import Ic_Briefcase from "../src/Ic_Briefcase";
 import Ic_Instagram from "../src/Ic_Instagram";
 import Ic_Twitter from "../src/Ic_Twitter";
 import Ic_LinkedIn from "../src/Ic_LinkedIn";
@@ -50,6 +51,13 @@ const MakerCard = ({ directory }) => {
           <span className="inline mr-3 sm:mr-6 social-icon">
             <a href={directory.linkedin}>
               <Ic_LinkedIn />
+            </a>
+          </span>
+        ) : null}
+        {directory.website2 ? (
+          <span className="inline mr-3 sm:mr-6 social-icon">
+            <a href={directory.website2}>
+              <Ic_Briefcase/>
             </a>
           </span>
         ) : null}
