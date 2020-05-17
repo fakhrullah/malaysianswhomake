@@ -45,6 +45,7 @@ h3 {
   background-color: #000;
   color: #fff;
   margin-left: 1rem;
+  border-radius: 4px 4px 0 0;
 }
 
 .btn-solid:hover {
@@ -94,10 +95,28 @@ input:checked + svg {
   filter: none;
 }
 
-footer {
-  width: 100%;
+.feedback {
+  z-index: 100;
+  background-color: #fff;
+  color: #000;
   position: fixed;
   bottom: 0;
+  left: 2em;
+  border: 1px solid #ededed;
+  width: 16em;
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  padding: 16px;
+}
+
+.feedbackinput {
+  border: 1px solid #ededed;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+footer {
+  width: 100%;
   color: #000;
   background-color: #fff;
 }

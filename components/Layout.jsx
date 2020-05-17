@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import Ic_Logo from "../src/Ic_Logo";
+import Feedback from "./Feedback";
 
 export default ({ children }) => (
   <div>
@@ -34,11 +34,13 @@ export default ({ children }) => (
             About
           </a></Link>
           <a target="_blank" href="https://forms.gle/tGzbZJaden9ZCSZe7" 
-          className="btn btn-solid rounded font-semibold md:text-s">
+          className="btn btn-solid font-semibold md:text-s">
             Nominate
           </a>
         </div>
     </nav>
+
+    <Feedback/>
 
     {children}
 
