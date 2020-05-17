@@ -40,7 +40,7 @@ export default ({ children }) => (
         </div>
     </nav>
 
-    <Feedback/>
+    {/* <Feedback/> */}
 
     {children}
 
