@@ -1,44 +1,78 @@
-import React, {useState} from "react";
-import Ic_Twitter from "../src/Ic_Twitter"
+import {useState} from "react";
+import Ic_ChevronUp from "../src/Ic_ChevronUp";
+import FeedbackForm from "./FeedbackForm";
 
-function FeedbackForm() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [comment, setComment] = useState('');
+function Feedback() {
+  
+    const [feedback, setFeedback] = useState({
+      name: '',
+      email: '',
+      subject: 'StaticForms - New Feedback',
+      honeypot: '',
+      message: '',
+      accessKey: '49832cd6-0093-472e-8c10-9c9b2c06c87f'
+    });
+    
+    const [response, setResponse] = useState({
+      type: '',
+      message: ''
+    });
+
+    const handleChange = e =>
+    setFeedback({ ...feedback, [e.target.name]: e.target.value });
+    
+    const handleSubmit = async e => {
+      e.preventDefault();
+      try {
+        const res = await fetch('https://api.staticforms.xyz/submit', {
+          method: 'POST',
+          body: JSON.stringify(feedback),
+          headers: { 'Content-Type': 'application/json' }
+        });
+      
+        const json = await res.json();
+
+        if (json.success) {
+          setResponse({
+            type: 'success',
+            message: 'Thank you! ❤️'
+          });
+        } else {
+          setResponse({
+            type: 'error',
+            message: json.message
+          });
+        }
+      } catch (e) {
+        setResponse({
+          type: 'error',
+          message: 'An error occured while submitting the form.'
+        });
+      }
+    };
+
     return (
-      <form className="feedback">
-        <div className="pb-4">
+
+      <form 
+        className="feedback" 
+        action='https://api.staticforms.xyz/submit'
+        method='POST'
+        onSubmit={handleSubmit}
+      >
+        <div>
           <span className="font-bold">Feedback</span>
-          <span className="float-right"><Ic_Twitter/></span>
+          <button className="float-right">
+            <Ic_ChevronUp/>
+          </button>
         </div>
-        <label className="pb-2">What's your name?</label>
-        <input 
-          className="feedbackinput" 
-          type="text" 
-          name="name" 
-          value={name}
-          onChange={e => setName(e.target.value)}
+
+        <FeedbackForm
+          response={response}
+          onChange={handleChange}
         />
-        <label className="pb-2">What's your email?</label>
-        <input 
-          className="feedbackinput" 
-          type="email" 
-          name="email" 
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-        />
-        <label className="pb-2">Your feedback</label>
-        <textarea
-          className="feedbackinput" 
-          name="comment"
-          value={comment}
-          onChange={e => setComment(e.target.value)}
-        />
-        <button 
-          className="btn btn-solid float-right" 
-          type="submit">Submit</button>
+        
       </form>
     )
-}
+  }
 
-export default FeedbackForm;
+export default Feedback;
