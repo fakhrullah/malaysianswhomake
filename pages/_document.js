@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { UA-166954166-1 } from '../lib/gtag';
 
 class MyDocument extends Document {
     
@@ -22,10 +21,8 @@ class MyDocument extends Document {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'UA-166954166-1', {
-              page_path: window.location.pathname,
-            });
-          `,
+            gtag('config', 'UA-166954166-1');
+            `
             }}
           />
         </Head>
