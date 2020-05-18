@@ -30,7 +30,7 @@ function MakerList({ makerDirectory, expertiseList }) {
     )
     .sort((a,b) => {return a.name > b.name;});
     
-  console.log(makerList);
+  // console.log(makerList);
 
   const [currentPage, setCurrentPage] = useState(0);
   let makersToShow = chunk(makerList, PER_PAGE)[currentPage] || [];
