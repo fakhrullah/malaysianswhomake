@@ -2,6 +2,11 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* .dark-mode {
+  background-color: #000;
+  color: #fff;
+} */
+
 .header {
   display: flex;
   width: 100%;
@@ -34,6 +39,10 @@ h3 {
 .textlink {
   font-weight: 700;
   text-decoration: underline;
+}
+
+button:focus, input:focus {
+  outline: none;
 }
 
 .btn {
@@ -102,17 +111,20 @@ input:checked + svg {
   position: fixed;
   bottom: 0;
   left: 2em;
-  border: 1px solid #ededed;
-  width: 16em;
+  border: 1px solid #dedede;
+  width: 14em;
   border-bottom: 0;
   border-radius: 8px 8px 0 0;
-  padding: 16px;
+  padding: 12px;
 }
 
 .feedbackinput {
-  border: 1px solid #ededed;
+  background-color: #fff;
+  border: 1px solid #dedede;
+  padding: 8px;
   margin-bottom: 1rem;
   width: 100%;
+  outline: none;
 }
 
 footer {

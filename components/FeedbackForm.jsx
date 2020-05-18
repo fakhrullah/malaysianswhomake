@@ -2,7 +2,7 @@ import React from 'react';
 
 const FeedbackForm = ({ response, handleChange }) => {
     return (
-    <div className="pt-4">
+    <div className="pt-4 text-s">
         <label>Hi! What's your name?</label>
         <input 
             className="feedbackinput"
@@ -31,7 +31,7 @@ const FeedbackForm = ({ response, handleChange }) => {
             {response.message}
         </span>
 
-        <button className="btn btn-solid float-right" type="submit">Send</button>
+        <button className="btn btn-solid float-right font-semibold" type="submit">Send</button>
     </div>
 )};
 
