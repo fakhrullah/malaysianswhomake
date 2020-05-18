@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import GoogleAnalytics from "./GoogleAnalytics";
 import Feedback from "./Feedback";
 
 export default ({ children }) => (
@@ -15,6 +16,7 @@ export default ({ children }) => (
       <meta name="author" content="Rachel How"/>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700" rel="stylesheet"/>
+      <GoogleAnalytics />
     </Head>
 
     <nav className="fixed z-10 flex-row header px-12 py-6 md:inline-block sm:inline-block sm:py-10">
