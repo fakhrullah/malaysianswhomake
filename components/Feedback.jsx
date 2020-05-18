@@ -1,7 +1,6 @@
 import {useState} from "react";
 import Ic_ChevronUp from "../src/Ic_ChevronUp";
 import Ic_ChevronDown from "../src/Ic_ChevronDown";
-import FeedbackForm from "./FeedbackForm";
 
 function Feedback() {
   const [feedback, setFeedback] = useState({
@@ -79,12 +78,40 @@ function Feedback() {
       </div>
 
       { showForm === true ? 
-        <FeedbackForm
-          response={response}
-          onChange={handleChange}
-        /> : null 
+          <div className="pt-4 text-s">
+            <label>Hi! What's your name?</label>
+            <input 
+                className="feedbackinput"
+                type="text" 
+                name="name"
+                onChange={handleChange}
+                required
+            />
+            <label htmlFor="email">Your email (optional)</label>
+            <input 
+                className="feedbackinput" 
+                type="email" 
+                name="email"
+                onChange={handleChange}
+            />
+            <input type='hidden' name='subject' onChange={handleChange}/>
+            <input type='text' name='honeypot' className="hidden" onChange={handleChange}/>
+            <label className="pb-2" htmlFor="feedback">Your feedback</label>
+            <textarea
+                className="feedbackinput" 
+                name="message"
+                onChange={handleChange}
+                required
+                />
+            <span className={response.type === 'submitted' ? 'text-xs' : 'is-hidden text-xs'}>
+                {response.message}
+            </span>
+
+            <button className="btn btn-solid float-right font-semibold" type="submit">Send</button>
+         </div>
+
+        : null 
       }
-      
     </form>
   )
 }
