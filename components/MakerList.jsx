@@ -28,7 +28,7 @@ function MakerList({ makerDirectory, expertiseList }) {
         activeExpertises.includes(maker.expertise1) ||
         activeExpertises.includes(maker.expertise2)
     )
-    .sort((a,b) => {return a.name > b.name;});
+    .sort();
     
   // console.log(makerList);
 
