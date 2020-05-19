@@ -1,7 +1,6 @@
 import chunk from "lodash/chunk";
 
 export const PER_PAGE = 12;
-// as a convention, we name constants as UPPER_CASE
 
 const Pagination = (props) => {
   const { currentPage = 0, makerDirectory, onChange = () => {} } = props;
@@ -11,8 +10,6 @@ const Pagination = (props) => {
   // of an irresponsible parent :)
 
   const totalPages = chunk(makerDirectory, PER_PAGE).length;
-
-  // <React.Fragment /> is an empty fragment
 
   return totalPages === 1 ? (
     <React.Fragment />

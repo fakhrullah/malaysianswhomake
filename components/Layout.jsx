@@ -19,7 +19,7 @@ export default ({ children }) => (
       <GoogleAnalytics />
     </Head>
 
-    <nav className="fixed z-10 flex-row header px-12 py-6 md:inline-block sm:inline-block sm:py-10">
+    <nav className="fixed z-10 flex-row header px-12 py-6 md:inline-block sm:inline-block sm:py-4">
         <div className="w-1/3 sm:w-full">
             {/* nothing here  */}
         </div>
