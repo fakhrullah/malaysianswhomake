@@ -5,7 +5,9 @@ const FilterList = ({ expertiseList, onChange = () => {} }) => (
 
         <div className="font-semibold leading-5 pb-8">
         Discover talented, passionate Malaysians who always strive 
-        to create and build stuff.
+        to create &amp; build stuff. Want to be part of this?&nbsp;
+        <a href="https://forms.gle/tGzbZJaden9ZCSZe7/" className="underline">
+          Submit</a> your info in 30 secs.
         </div>
 
         <div className="pb-6">

@@ -37,7 +37,7 @@ export default ({ children }) => (
           </a></Link>
           <a target="_blank" href="https://forms.gle/tGzbZJaden9ZCSZe7" 
           className="btn btn-solid font-semibold md:text-s">
-            Nominate
+            Submit My Info
           </a>
         </div>
     </nav>
