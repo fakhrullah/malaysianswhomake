@@ -67,14 +67,14 @@ function Feedback() {
     >
       <div>
         <span className="text-s font-bold">We ❤️Feedback</span>
-        <button 
-          className="float-right outline-none"
+        <div 
+          className="float-right outline-none cursor-pointer"
           onClick={ () => onToggleForm() }
         >
           {showForm === true ? 
             <Ic_ChevronDown/> : <Ic_ChevronUp/>
           }
-        </button>
+        </div>
       </div>
 
       { showForm === true ? 
