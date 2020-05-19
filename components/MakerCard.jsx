@@ -1,4 +1,6 @@
 import React from "react";
+// import ReadMoreAndLess from 'react-read-more-less';
+import ReadMoreAndLess from "../components/ReadMore";
 import Ic_Location from "../src/Ic_Location";
 import Ic_Website from "../src/Ic_Website";
 import Ic_Briefcase from "../src/Ic_Briefcase";
@@ -9,6 +11,7 @@ import Ic_LinkedIn from "../src/Ic_LinkedIn";
 const MakerCard = ({ directory }) => {
   return (
     <div className="max-w-14 sm:max-w-48">
+
       <div className="h-full">
         {directory.image ? (
           <img
@@ -18,13 +21,21 @@ const MakerCard = ({ directory }) => {
           />
         ) : null}
       </div>
+
       <div className="pt-2 pb-0.75 font-semibold md:text-s sm:text-24">
         {directory.name}
       </div>
+
       <div className="text-s md:text-xs sm:text-l inline align-middle location-icon">
         <Ic_Location/> {directory.location}
       </div>
-      <div className="text-s md:text-xs sm:text-l pt-2 pb-4">{directory.biography}</div>
+
+      <div className="text-s md:text-xs sm:text-l pt-2 pb-4">
+        <ReadMoreAndLess>
+            {directory.biography}
+        </ReadMoreAndLess>
+      </div>
+
       <div>
         {directory.website ? (
           <span className="inline mr-3 sm:mr-6 social-icon">
@@ -62,6 +73,7 @@ const MakerCard = ({ directory }) => {
           </span>
         ) : null}
       </div>
+
     </div>
   );
 };
