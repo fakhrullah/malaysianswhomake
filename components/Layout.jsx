@@ -16,8 +16,8 @@ export default ({ children }) => (
       <meta property="og:type" content="website" />
       <meta name="og:description" content="Malaysians Who Make is the place to discover talented makers, from artists, designers, writers to developers."/>
       <meta property="og:url" content="https://malaysianswhomake.com"/>
-      <meta property="og:image" content="https://ibb.co/8NGF5zR" /> 
-      <meta property="twitter:image" content="https://ibb.co/8NGF5zR" /> 
+      <meta property="og:image" content="https://i.ibb.co/ckRzFbp/URL-image-preview.png" /> 
+      <meta property="twitter:image" content="https://i.ibb.co/ckRzFbp/URL-image-preview.png" /> 
       
       <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700" rel="stylesheet"/>
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
