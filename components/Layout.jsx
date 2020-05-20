@@ -9,9 +9,11 @@ export default ({ children }) => (
       <title>Malaysians Who Make</title>
       <meta charSet="utf-8" />
       <meta property="og:title" content="Malaysians Who Make" />
+      <meta property="og:type" content="website" />
       <meta name="description" content={`MalaysiansWhoMake is the 
         place to discover talented makers, from artists, designers, 
         writers to developers.`}/>
+      <meta property="og:url" content="https://malaysianswhomake.com"/>
       <meta property="og:image" content="https://ibb.co/8NGF5zR" /> 
       <meta name="author" content="Rachel How"/>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
