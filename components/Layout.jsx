@@ -7,15 +7,17 @@ export default ({ children }) => (
   <div>
     <Head>
       <title>Malaysians Who Make</title>
-      <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <meta charSet="utf-8" />
-      <meta name="description"
-        content={`MalaysiansWhoMake is the place to discover talented, 
-        innovative makers, from artists to indie hackers.`}
-      />
+      <meta property="og:title" content="Malaysians Who Make" />
+      <meta name="description" content={`MalaysiansWhoMake is the 
+        place to discover talented makers, from artists, designers, 
+        writers to developers.`}/>
+      <meta property="og:image" content="https://ibb.co/8NGF5zR" /> 
       <meta name="author" content="Rachel How"/>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700" rel="stylesheet"/>
+      <link rel="shortcut icon" href="/favicon/favicon.ico" />
+      <link rel="canonical" href="https://malaysianswhomake.com"/>
       <GoogleAnalytics />
     </Head>
 
