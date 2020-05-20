@@ -10,7 +10,7 @@ export default ({ children }) => (
       <meta charSet="utf-8" />
       <meta property="og:title" content="Malaysians Who Make" />
       <meta property="og:type" content="website" />
-      <meta name="description" content={`MalaysiansWhoMake is the 
+      <meta name="description" content={`Malaysians Who Make is the 
         place to discover talented makers, from artists, designers, 
         writers to developers.`}/>
       <meta property="og:url" content="https://malaysianswhomake.com"/>
