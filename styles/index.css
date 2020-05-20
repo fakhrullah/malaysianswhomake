@@ -9,6 +9,7 @@
   color: #000;
   background-color: #fff;
   align-items: center;
+  z-index: 100;
 }
 
 body {
