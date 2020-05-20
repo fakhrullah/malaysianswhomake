@@ -2,11 +2,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-/* .dark-mode {
-  background-color: #000;
-  color: #fff;
-} */
-
 .header {
   display: flex;
   width: 100%;
@@ -94,6 +89,18 @@ input:checked + svg {
 
 .social-icon:hover circle{
   fill: #ffcc00;
+}
+
+.makerTag {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 100;
+  top: 10px;
+  right: 10px;
+  background-color: #313896;
+  padding: 6px 10px;
+  border-radius: 30px;
 }
 
 .makerImage {
