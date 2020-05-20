@@ -7,7 +7,7 @@ function About() {
       <div className="container mx-auto text-center px-24 py-32 md:px-8 md:py-48 sm:px-8 sm:py-48">
           <div className="pb-8 text-center">
             <div className="flex justify-center">
-              <img src="https://i.ibb.co/7vWVZzV/cityimage.jpg"/>
+              <img src="https://i.ibb.co/7vWVZzV/cityimage.jpg" width="100%"/>
             </div>
             <span className="opacity-50 text-xs"><a href="https://unsplash.com/@seakei" target="_blank">Shot by CK Yeo on Unsplash</a></span>
           </div>
@@ -16,7 +16,7 @@ function About() {
               <h1 className="text-xl">We are Malaysians.</h1><br/>
               <strong>🇲🇾 Malaysians Who Make</strong> is the place to discover talented, 
               passionate Malaysians who strive to build and create things. 
-              From artists, writers, speakers to indie hackers, let's grow a community 
+              From artists, writers, speakers to indie makers, let's grow a community 
               of like-minded people who make the world a better place.<br/><br/>
               <h3>Built with Malaysians in mind.</h3><br/>
               Fellow makers - connect with people just like you.<br/>
@@ -37,7 +37,7 @@ function About() {
           <div className="pb-16 px-12 sm:px-0">
               <h2>Inspiration</h2><br/>
               This site is inspired by these great initiatives.<br/>
-              Check them out as well!<br/><br/>
+              Check them out as well!<br/>
               <div className="py-8 px-24 md:px-0 sm:px-0">
                     <div className="flex pb-8 grid-cols-3 text-left font-semibold sm:text-s">
                       <div className="inline-block px-4 sm:px-2">
