@@ -34,18 +34,56 @@ function About() {
               Feedback or idea?&nbsp;<a href="https://forms.gle/LeWjrJG8fXkC1Ud77" target="_blank"
               className="textlink">Share with us</a>.<br/>
           </div>
-          <div className="pb-16 px-16 sm:px-0">
+          <div className="pb-16 px-12 sm:px-0">
               <h2>Inspiration</h2><br/>
               This site is inspired by these great initiatives.<br/>
               Check them out as well!<br/><br/>
-              <div>
-                <a href="https://www.latinxswhodesign.com/" target="_blank" className="font-semibold">Latinxs Who Design</a>
-                &nbsp;| <a href="https://womenwho.design/" target="_blank" className="font-semibold">Women Who Design</a>
-                &nbsp;| <a href="https://peopleofcraft.com/" target="_blank" className="font-semibold">People Of Craft</a><br/>
-                <a href="https://blackswho.design/" target="_blank" className="font-semibold">Blacks Who Design</a>
-                &nbsp;| <a href="https://queerdesign.club/" target="_blank" className="font-semibold">Queer Design Club</a>
+              <div className="py-8 px-24 md:px-0 sm:px-0">
+                    <div className="flex pb-8 grid-cols-3 text-left font-semibold sm:text-s">
+                      <div className="inline-block px-4 sm:px-2">
+                        <a href="https://www.adplist.org/" target="_blank">
+                          <img src="https://i.ibb.co/NVqLDhD/adplist.png" alt="adplist" className="pb-1"/>
+                          <span>Amazing Design People List</span>
+                        </a>
+                      </div>
+                      <div className="inline-block px-4 sm:px-2">
+                        <a href="https://womenwho.design/" target="_blank">
+                          <img src="https://i.ibb.co/Q8GMzNh/womenwhodesign.png" alt="womenwhodesign" className="pb-1"/>
+                          <span>Women Who Design</span>
+                        </a>
+                      </div>
+                      <div className="inline-block px-4 sm:px-2">
+                        <a href="https://www.latinxswhodesign.com/" target="_blank">
+                          <img src="https://i.ibb.co/yV5wHtT/latinxswhodesign.png" alt="latinxswhodesign" className="pb-1"/>
+                          <span>Latinxs Who Design</span>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="flex grid-cols-3 text-left font-semibold sm:text-s">
+                      <div className="inline-block px-4 sm:px-2">
+                        <a href="https://peopleofcraft.com/" target="_blank">
+                          <img src="https://i.ibb.co/MZdGkvC/peopleofcraft.png" alt="peopleofcraft" className="pb-1"/>
+                          <span>People of Craft</span>
+                        </a>
+                      </div>
+                      <div className="inline-block px-4 sm:px-2">
+                        <a href="https://queerdesign.club/" target="_blank">
+                          <img src="https://i.ibb.co/LQC63bg/queerdesignclub.png" alt="queerdesignclub" className="pb-1"/>
+                          <span>Queer Design Club</span>
+                        </a>
+                      </div>
+                      <div className="inline-block px-4 sm:px-2">
+                        <a href="https://blackswho.design/" target="_blank">
+                          <img src="https://i.ibb.co/5TbXprx/blackswhodesign.png" alt="latinxswhodesign" className="pb-1"/>
+                          <span>Blacks Who Design</span>
+                        </a>
+                      </div>
+                    </div>
               </div>
           </div>
+
+
           <div className="pb-16 px-16 sm:px-0">
               <h2>Credits</h2><br/>
               Designed and coded by <a href="https://twitter.com/rachelhxw" target="_blank"
