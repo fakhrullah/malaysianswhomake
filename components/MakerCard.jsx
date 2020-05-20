@@ -39,35 +39,35 @@ const MakerCard = ({ directory }) => {
       <div>
         {directory.website ? (
           <span className="inline mr-3 sm:mr-6 social-icon">
-            <a href={directory.website}>
+            <a href={directory.website} target="_blank">
               <Ic_Website/>
             </a>
           </span>
         ) : null}
         {directory.instagram ? (
           <span className="inline mr-3 sm:mr-6 social-icon">
-            <a href={directory.instagram}>
+            <a href={directory.instagram} target="_blank">
               <Ic_Instagram />
             </a>
           </span>
         ) : null}
         {directory.twitter ? (
           <span className="inline mr-3 sm:mr-6 social-icon">
-            <a href={directory.twitter}>
+            <a href={directory.twitter} target="_blank">
               <Ic_Twitter />
             </a>
           </span>
         ) : null}
         {directory.linkedin ? (
           <span className="inline mr-3 sm:mr-6 social-icon">
-            <a href={directory.linkedin}>
+            <a href={directory.linkedin} target="_blank">
               <Ic_LinkedIn />
             </a>
           </span>
         ) : null}
         {directory.website2 ? (
           <span className="inline mr-3 sm:mr-6 social-icon">
-            <a href={directory.website2}>
+            <a href={directory.website2} target="_blank">
               <Ic_Briefcase/>
             </a>
           </span>
