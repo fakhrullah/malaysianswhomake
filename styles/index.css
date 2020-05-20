@@ -95,7 +95,7 @@ input:checked + svg {
   display: flex;
   flex-direction: column;
   position: absolute;
-  z-index: 100;
+  z-index: 10;
   top: 10px;
   right: 10px;
   background-color: #313896;

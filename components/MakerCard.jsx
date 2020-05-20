@@ -19,7 +19,7 @@ const MakerCard = ({ directory }) => {
             alt="img"
           />
           {directory.tag === "adplist" ? 
-            <a className="makerTag" href="https://adplist.org/"><Ic_AdplistTag/></a> 
+            <a className="makerTag" href="https://adplist.org/" target="_blank"><Ic_AdplistTag/></a> 
             : null}
       </div>
 
