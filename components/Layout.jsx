@@ -8,15 +8,17 @@ export default ({ children }) => (
     <Head>
       <title>Malaysians Who Make</title>
       <meta charSet="utf-8" />
-      <meta property="og:title" content="Malaysians Who Make" />
-      <meta property="og:type" content="website" />
-      <meta name="description" content={`Malaysians Who Make is the 
-        place to discover talented makers, from artists, designers, 
-        writers to developers.`}/>
-      <meta property="og:url" content="https://malaysianswhomake.com"/>
-      <meta property="og:image" content="https://ibb.co/8NGF5zR" /> 
+      <meta name="title" content="Malaysians Who Make"/>
+      <meta name="description" content="Malaysians Who Make is the place to discover talented makers, from artists, designers, writers to developers."/>
       <meta name="author" content="Rachel How"/>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta property="og:title" content="Malaysians Who Make" />
+      <meta property="og:type" content="website" />
+      <meta name="og:description" content="Malaysians Who Make is the place to discover talented makers, from artists, designers, writers to developers."/>
+      <meta property="og:url" content="https://malaysianswhomake.com"/>
+      <meta property="og:image" content="https://ibb.co/8NGF5zR" /> 
+      <meta property="twitter:image" content="https://ibb.co/8NGF5zR" /> 
+      
       <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700" rel="stylesheet"/>
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <link rel="canonical" href="https://malaysianswhomake.com"/>
