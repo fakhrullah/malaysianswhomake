@@ -1,6 +1,6 @@
 import chunk from "lodash/chunk";
 
-export const PER_PAGE = 12;
+export const PER_PAGE = 50;
 
 const Pagination = (props) => {
   const { currentPage = 0, makerDirectory, onChange = () => {} } = props;
