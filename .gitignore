@@ -1,7 +1,12 @@
 node_modules
 .next
 .DS_Store
+logs
+*.log
 npm-debug.log
 yarn-error.log
 .vscode
 out
+.env
+.npm
+.eslintcache
