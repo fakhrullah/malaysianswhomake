@@ -1,4 +1,3 @@
-import React from "react";
 import ReadMoreAndLess from "../components/ReadMore";
 import Ic_Location from "../src/Ic_Location";
 import Ic_Website from "../src/Ic_Website";

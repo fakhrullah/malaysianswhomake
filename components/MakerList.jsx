@@ -4,11 +4,6 @@ import Pagination, { PER_PAGE } from "../components/Pagination";
 import MakerCard from "../components/MakerCard";
 import FilterList from "../components/Filters";
 
-// sort makers alphabetically
-// itemsArray.sort((a,b) => {
-//   return a.name > b.name;
-// });
-
 function MakerList({ makerDirectory, expertiseList }) {
   const [activeExpertises, setActiveExpertises] = useState([]);
 

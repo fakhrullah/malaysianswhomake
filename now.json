@@ -1,0 +1,15 @@
+{
+  "name": "nextjs-mongodb-app",
+  "version": 2,
+  "build": {
+    "env": {
+      "MONGODB_URI": "mongodb+srv://admin123:ebOScErFLEl8zUjh@cluster0-gunq2.mongodb.net/test?retryWrites=true&w=majority",
+      "CLOUDINARY_URL": "cloudinary://741947492169653:vkyuRmZ3EbSULnkfXJdtSqwhURw@dbplcha6k",
+      "DB_NAME": "mwm",
+      "SENDGRID_API_KEY": "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",
+      "EMAIL_FROM": "averyniceguy@nextjs-mongodb.now.sh",
+      "WEB_URI": "https://nextjs-mongodb.now.sh",
+      "USING_SECRETS": "Consider using Zeit Now Secrets instead."
+    }
+  }
+}

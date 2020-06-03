@@ -81,7 +81,7 @@ function Feedback() {
           <div className="pt-4 text-s">
             <label>Hi! What's your name?</label>
             <input 
-                className="feedbackinput"
+                className="forminput"
                 type="text" 
                 name="name"
                 onChange={handleChange}
@@ -89,7 +89,7 @@ function Feedback() {
             />
             <label htmlFor="email">Your email (optional)</label>
             <input 
-                className="feedbackinput" 
+                className="forminput" 
                 type="email" 
                 name="email"
                 onChange={handleChange}
@@ -98,7 +98,7 @@ function Feedback() {
             <input type='text' name='honeypot' className="hidden" onChange={handleChange}/>
             <label className="pb-2" htmlFor="feedback">Your feedback</label>
             <textarea
-                className="feedbackinput" 
+                className="forminput" 
                 name="message"
                 onChange={handleChange}
                 required

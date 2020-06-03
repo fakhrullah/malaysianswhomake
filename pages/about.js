@@ -1,9 +1,14 @@
 import React from "react";
 import Layout from "../components/Layout";
+import Head from "next/head";
 
 function About() {
   return (
     <Layout>
+      <Head>
+        <title>About</title>
+      </Head>
+
       <div className="container mx-auto text-center px-24 py-32 md:px-8 md:py-48 sm:px-8 sm:py-48">
           <div className="pb-8 text-center">
             <div className="flex justify-center">
