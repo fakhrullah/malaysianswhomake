@@ -6,7 +6,7 @@ module.exports = {
     CLOUDINARY_URL: process.env.CLOUDINARY_URL,
     DB_NAME: process.env.DB_NAME,
     WEB_URI: process.env.WEB_URI,
-    SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
+    // SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
     EMAIL_FROM: process.env.EMAIL_FROM,
   },
 };

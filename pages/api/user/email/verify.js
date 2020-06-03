@@ -1,5 +1,5 @@
 import crypto from 'crypto';
-import sgMail from '@sendgrid/mail';
+// import sgMail from '@sendgrid/mail';
 import nextConnect from 'next-connect';
 import middleware from '../../../../middlewares/middleware';
 

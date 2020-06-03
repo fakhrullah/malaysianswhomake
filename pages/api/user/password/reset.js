@@ -1,4 +1,4 @@
-import sgMail from '@sendgrid/mail';
+// import sgMail from '@sendgrid/mail';
 import crypto from 'crypto';
 import bcrypt from 'bcryptjs';
 import nextConnect from 'next-connect';
