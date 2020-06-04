@@ -37,7 +37,9 @@ handler.patch(upload.single('profilePicture'), async (req, res) => {
     });
     profilePicture = image.secure_url;
   }
-  const { name, bio, location, website } = req.body;
+  const { name, bio, location, expertises, link_website, link_portfolio, link_twitter, 
+    link_github, link_linkedin, link_instagram, link_behance, link_dribbble, link_medium 
+  } = req.body;
   await req.db.collection('profiles').updateOne(
     { _id: req.user._id },
     {
@@ -45,12 +47,23 @@ handler.patch(upload.single('profilePicture'), async (req, res) => {
         ...(name && { name }),
         bio: bio || '',
         location: location || '',
-        website: website || '',
+        expertises: expertises || [],
+        link_website: link_website || '',
+        link_portfolio: link_portfolio || '',
+        link_twitter: link_twitter || '',
+        link_github: link_github || '',
+        link_linkedin: link_linkedin || '',
+        link_instagram: link_instagram || '',
+        link_behance: link_behance || '',
+        link_dribbble: link_dribbble || '',
+        link_medium: link_medium || '',
         ...(profilePicture && { profilePicture }),
       },
     },
   );
-  res.json({ user: { name, bio, location, website } });
+  res.json({ user: { name, bio, location, expertises, link_website, link_portfolio, 
+    link_twitter, link_github, link_linkedin, link_instagram, link_behance, link_dribbble, link_medium 
+  } });
 });
 
 export const config = {

@@ -1,46 +1,47 @@
-import { useState, useEffect, useRef } from 'react';
-import Head from 'next/head';
-import Layout from '../components/Layout';
-import { useCurrentUser } from '../lib/hooks';
+import { useState, useEffect, useRef } from 'react'
+import Head from 'next/head'
+import Layout from '../components/Layout'
+import { useCurrentUser } from '../lib/hooks'
+import expList from '../lib/expertises.json'
 
 const ProfileSection = () => {
   const [user, { mutate }] = useCurrentUser();
   const [isUpdating, setIsUpdating] = useState(false);
   const [msg, setMsg] = useState({ message: '', isError: false });
-  console.log(user)
 
   const nameRef = useRef();
   const profilePictureRef = useRef();
   const emailRef = useRef();
   const locationRef = useRef();
   const bioRef = useRef();
-  const exp1Ref = useRef();
+  const expertisesRef = useRef();
   const websiteRef = useRef();
   const portfolioRef = useRef();
-  const linkedinRef = useRef();
   const twitterRef = useRef();
-  const instagramRef = useRef();
   const githubRef = useRef();
-  const mediumRef = useRef();
+  const linkedinRef = useRef();
+  const instagramRef = useRef();
   const behanceRef = useRef();
   const dribbbleRef = useRef();
+  const mediumRef = useRef();
 
+  console.log(user)
 
   useEffect(() => {
     nameRef.current.value = user.name;
     emailRef.current.value = user.email;
-    locationRef.current.value = user.location;
+    locationRef.current.value = user.location || '';
     bioRef.current.value = user.bio || '';
-    exp1Ref.current.value = user.exp1 || '';
-    websiteRef.current.value = user.website || '';
-    portfolioRef.current.value = user.portfolio || '';
-    linkedinRef.current.value = user.linkedin || '';
-    twitterRef.current.value = user.twitter || '';
-    instagramRef.current.value = user.instagram || '';
-    githubRef.current.value = user.github || '';
-    mediumRef.current.value = user.medium || '';
-    behanceRef.current.value = user.behance || '';
-    dribbbleRef.current.value = user.dribbble || '';
+    expertisesRef.current.value = user.expertises || '';
+    websiteRef.current.value = user.link_website || '';
+    portfolioRef.current.value = user.link_portfolio || '';
+    twitterRef.current.value = user.link_twitter || '';
+    githubRef.current.value = user.link_github || '';
+    linkedinRef.current.value = user.link_linkedin || '';
+    instagramRef.current.value = user.link_instagram || '';
+    behanceRef.current.value = user.link_behance || '';
+    dribbbleRef.current.value = user.link_dribbble || '';
+    mediumRef.current.value = user.link_medium || '';
   }, [user]);
 
   const handleSubmit = async (event) => {
@@ -54,16 +55,16 @@ const ProfileSection = () => {
     formData.append('location', locationRef.current.value);
     formData.append('bio', bioRef.current.value);
     formData.append('email', emailRef.current.value);
-    formData.append('exp1', exp1Ref.current.value);
-    formData.append('website', websiteRef.current.value);
-    formData.append('portfolio', portfolioRef.current.value);
-    formData.append('linkedin', linkedinRef.current.value);
-    formData.append('twitter', twitterRef.current.value);
-    formData.append('instagram', instagramRef.current.value);
-    formData.append('github', githubRef.current.value);
-    formData.append('medium', mediumRef.current.value);
-    formData.append('behance', behanceRef.current.value);
-    formData.append('dribbble', dribbbleRef.current.value);
+    formData.append('expertises', expertisesRef.current.value);
+    formData.append('link_website', websiteRef.current.value);
+    formData.append('link_portfolio', portfolioRef.current.value);
+    formData.append('link_twitter', twitterRef.current.value);
+    formData.append('link_github', githubRef.current.value);
+    formData.append('link_linkedin', linkedinRef.current.value);
+    formData.append('link_instagram', instagramRef.current.value);
+    formData.append('link_behance', behanceRef.current.value);
+    formData.append('link_dribbble', dribbbleRef.current.value);
+    formData.append('link_medium', mediumRef.current.value);
 
 
     const res = await fetch('/api/user', {
@@ -195,15 +196,22 @@ const ProfileSection = () => {
             />
           </div>
           <div>
-            <label htmlFor="exp1" className="formlabel text-s my-1">Expertise 1</label>
-            <input
-              id="exp1"
-              name="exp1"
-              type="text"
-              placeholder=""
-              ref={exp1Ref}
-              className="forminput capitalize"
-            />
+            <label htmlFor="expertises" className="formlabel text-s my-1">Expertise (up to 5)</label>
+            {expList.expertises.map( (index) => (
+              <div key={index} className="inline-block">
+                <label className="block pill text-s">
+                  <input
+                    id={index}
+                    name={index}
+                    type="checkbox"
+                    value={index}
+                    ref={expertisesRef}
+                  />
+                  <span className="pill-label">{index}</span>
+                </label>
+              </div>
+            ))
+            }
           </div>
 
           <h3 className="pt-6 pb-4">Social Links</h3>

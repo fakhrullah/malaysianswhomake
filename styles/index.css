@@ -58,6 +58,36 @@ button:focus, input:focus {
   background-color: #ffcc00;
 }
 
+.pill {
+  background-color: #fff;
+  color: #000;
+  margin: 10px 10px 0 0;
+  border: 1px solid #000;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.pill input[type="checkbox"] {
+  display: none;
+}
+
+.pill:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.pill-label {
+  padding: 4px 10px;
+  display: block;
+}
+
+.pill input[type="checkbox"]:checked + .pill-label {
+  background-color: #000;
+  color: #fff;
+  border-radius: 16px;
+}
+
 .fabfilter {
   background-color: #000;
   color: #fff;
@@ -129,7 +159,6 @@ input:checked + svg {
 
 .formlabel {
   display: block;
-  text-transform: capitalize;
   color: #000;
   font-weight: 700;
 }

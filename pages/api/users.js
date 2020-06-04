@@ -38,7 +38,15 @@ handler.post(async (req, res) => {
       profilePicture: null,
       expertises: [],
       location: '',
-      website:''
+      link_website:'', 
+      link_portfolio:'',
+      link_twitter:'',
+      link_github:'',
+      link_linkedin:'',
+      link_instagram:'',
+      link_behance:'',
+      link_dribbble:'',
+      link_medium:''
     })
     .then(({ ops }) => ops[0]);
   req.logIn(user, (err) => {
