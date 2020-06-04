@@ -31,8 +31,8 @@ handler.patch(upload.single('profilePicture'), async (req, res) => {
   let profilePicture;
   if (req.file) {
     const image = await cloudinary.uploader.upload(req.file.path, {
-      width: 512,
-      height: 512,
+      width: 250,
+      height: 250,
       crop: 'fill',
     });
     profilePicture = image.secure_url;
@@ -47,7 +47,7 @@ handler.patch(upload.single('profilePicture'), async (req, res) => {
         ...(name && { name }),
         bio: bio || '',
         location: location || '',
-        expertises: expertises || [],
+        expertises: expertises || '',
         link_website: link_website || '',
         link_portfolio: link_portfolio || '',
         link_twitter: link_twitter || '',
@@ -61,7 +61,7 @@ handler.patch(upload.single('profilePicture'), async (req, res) => {
       },
     },
   );
-  res.json({ user: { name, bio, location, expertises, link_website, link_portfolio, 
+  res.json({ user: { name, profilePicture, bio, location, expertises, link_website, link_portfolio, 
     link_twitter, link_github, link_linkedin, link_instagram, link_behance, link_dribbble, link_medium 
   } });
 });

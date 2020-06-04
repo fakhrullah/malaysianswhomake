@@ -8,5 +8,6 @@ yarn-error.log
 .vscode
 out
 .env
+now.json
 .npm
 .eslintcache

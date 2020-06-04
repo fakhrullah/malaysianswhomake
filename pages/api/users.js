@@ -11,8 +11,10 @@ const handler = nextConnect();
 handler.use(middleware);
 
 handler.post(async (req, res) => {
-  const { name, password } = req.body;
+  const { name, password, expertises, location } = req.body; //important!
+
   const email = normalizeEmail(req.body.email);
+
   if (!isEmail(email)) {
     res.status(400).send('The email you entered is invalid.');
     return;
@@ -33,11 +35,11 @@ handler.post(async (req, res) => {
       email,
       password: hashedPassword,
       name,
+      expertises,
+      location,
       emailVerified: false,
-      bio: '',
-      profilePicture: null,
-      expertises: [],
-      location: '',
+      bio:'',
+      profilePicture: '',
       link_website:'', 
       link_portfolio:'',
       link_twitter:'',

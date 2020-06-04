@@ -5,6 +5,7 @@ import Error from 'next/error';
 import middleware from '../../../middlewares/middleware';
 import { useCurrentUser } from '../../../lib/hooks';
 import { getUser } from '../../../lib/db';
+import Ic_Location from '../../../src/Ic_Location'
 
 export default function UserPage({ user }) {
   if (!user) return <Error statusCode={404} />;
@@ -15,41 +16,27 @@ export default function UserPage({ user }) {
   const isCurrentUser = currentUser?._id === user._id;
   return (
     <Layout>
-      <style jsx>
-        {`
-          img {
-            width: 10rem;
-            height: auto;
-            border-radius: 50%;
-            box-shadow: rgba(0, 0, 0, 0.05) 0 10px 20px 1px;
-            margin-right: 1.5rem;
-            background-color: #f3f3f3;
-          }
-        `}
-      </style>
 
       <Head>
         <title>{name}</title>
       </Head>
       
       <div className="container mx-auto px-24 py-32 md:px-8 md:py-48 sm:px-8 sm:py-48">
-        <div>
-            <img src={profilePicture} width="256" height="256" alt={name} />
+        <div className="text-center">
+          <div className="flex justify-center"><img src={profilePicture} width="256" height="256" alt={name} /></div>
+          <div className="py-4">
             <h2>{name}</h2>
-            {isCurrentUser && (
-            <Link href="/settings">
-              <button type="button" className="btn btn-solid font-semibold md:text-s">Edit profile</button>
-            </Link>
-            )}
+            <Ic_Location/> {location}<br/><br/>
+            Expertise: <br/> <br/>
+            Bio: {bio} <br/> <br/>
           </div>
-          Bio:
-          <p>{bio}</p>
-          Location:
-          <p>{location}</p>
+        {isCurrentUser && (
+          <Link href="/settings">
+            <button type="button" className="btn btn-solid font-semibold md:text-s">Edit profile</button>
+          </Link>
+        )}
         </div>
-        <div>
-          <h3>Something here</h3>
-        </div>
+      </div>
     </Layout>
   );
 }

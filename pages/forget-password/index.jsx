@@ -23,20 +23,23 @@ const ForgetPasswordPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Forget password</title>
+        <title>Forgot password</title>
       </Head>
       <div className="container mx-auto px-24 py-32 md:px-8 md:py-48 sm:px-8 sm:py-48">
-        <h2>Forget password</h2>
-        <form onSubmit={handleSubmit}>
-          <p>Do not worry. Simply enter your email address below.</p>
-          <label htmlFor="email">
+        <h2>Forgot your password?</h2>
+        <form onSubmit={handleSubmit} className="pt-4 pb-8">
+          <p>We will send a password reset link to your email address below.</p>
+          <div>
+            <label htmlFor="email"></label>
             <input
               id="email"
               type="email"
               placeholder="Email"
+              className="forminput my-4"
             />
-          </label>
-          <button type="submit">Submit</button>
+          </div>
+          <button type="submit" className="btn btn-solid font-semibold">Submit</button><br/><br/>
+          <a href="/login">← Back to Login</a>
         </form>
       </div>
     </Layout>
