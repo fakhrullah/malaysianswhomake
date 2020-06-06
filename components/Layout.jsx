@@ -66,7 +66,7 @@ export default ({ children }) => {
                 <Link href="/about"><a className="btn font-semibold md:text-s">
                   About
                 </a></Link>
-                <Link href="/user/[userId]" as={`/user/${user._id}`}><a className="btn font-semibold md:text-s">
+                <Link href="/[userId]" as={`/${user.username}`}><a className="btn font-semibold md:text-s">
                   Profile
                 </a></Link>
                 <a tabIndex={0} role="button" onClick={handleLogout} href="/" className="btn font-semibold md:text-s">

@@ -23,14 +23,15 @@ handler.post(async (req, res) => {
     res.status(400).send('Missing field(s)');
     return;
   }
-  if ((await req.db.collection('profiles').countDocuments({ email })) > 0) {
-    res.status(403).send('The email has already been used.');
-    return;
-  }
   if ((await req.db.collection('profiles').countDocuments({ username })) > 0) {
     res.status(403).send('The username has already been used.');
     return;
   }
+  if ((await req.db.collection('profiles').countDocuments({ email })) > 0) {
+    res.status(403).send('The email has already been used.');
+    return;
+  }
+
   const hashedPassword = await bcrypt.hash(password, 10);
   const user = await req.db
     .collection('profiles')

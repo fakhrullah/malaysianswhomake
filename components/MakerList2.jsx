@@ -17,7 +17,7 @@ export default function MakerList() {
           {data.users.map(user => (
             <div key={user._id} className="max-w-14 sm:max-w-48">
                 <div className="h-full relative">
-                  <Link href="/user/[userId]" as={`/user/${user._id}`}><a>
+                  <Link href="/[userId]" as={`/${user.username}`}><a>
                     <img width="27" height="27" 
                           src={user.profilePicture || dummyPicture} alt={user.name} 
                           className="w-full h-imglg md:h-imgmd sm:h-imgsm object-cover makerImage"

@@ -368,7 +368,7 @@ const ProfileSection = () => {
         </form>
 
         <form onSubmit={handleSubmitPasswordChange} className="pt-8">
-          <h3 className="pb-4">Change password</h3>
+          <h3 className="pb-4">Security</h3>
           <div>
             <label htmlFor="oldpassword" className="formlabel my-1">Old Password</label>
             <input
