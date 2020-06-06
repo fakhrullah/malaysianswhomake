@@ -2,16 +2,18 @@ import React from "react"
 import Layout from "../components/Layout"
 import MakerList2 from "../components/MakerList2"
 import FilterList2 from "../components/FilterList2"
+import Link from 'next/link'
 // import Pagination from "../components/Pagination"
 
 function Home({onFilterChange, expertiseList }) {
   return (
     <Layout>
-        <div className="container mx-auto px-24 pt-32 md:px-8 md:pt-36 sm:px-8 sm:pt-40">
+        <div className="container mx-auto px-24 pt-16 md:px-8 md:pt-36 sm:px-8 sm:pt-40">
           
-          <div className="w-full text-center py-4">
+          <div className="w-full text-center py-16 my-10 border-2">
             Discover talented, passionate Malaysians who always strive to create and build stuff.<br/>
-            Want to be part of this? Submit your info in 30 secs.
+            Want to be part of this?<br/><br/>
+            <Link href="/signup"><a className="btn btn-solid font-semibold md:text-s">Submit My Info</a></Link>
           </div>
           
           <div className="inline-grid grid-cols-4 gap-10 pb-16 md:grid-cols-3 md:gap-4 sm:flex">

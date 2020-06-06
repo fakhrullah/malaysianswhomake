@@ -4,7 +4,7 @@ export default function FilterList2() {
   return (
     <div className="sticky top-8 h-screen overflow-y-scroll pb-10 md:top-11">
         <div className="pb-6">
-          <h3 className="pb-2">Expertise</h3>
+          <h3 className="pb-2">Filter by expertise</h3>
           {expList.expertises.map( (index) => (
               <div key={index} className="flex pb-1">
                 <label className="flex justify-start items-start">
