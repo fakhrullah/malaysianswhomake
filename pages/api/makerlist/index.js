@@ -9,7 +9,7 @@ handler.get(async (req, res) => {
   const users = await req.db
     .collection('profiles')
     .find({})
-    .sort({ createdAt: -1 })
+    .sort({ createdAt: 1 })
     // .limit(parseInt(req.query.limit, 10) || 10)
     .toArray();
     // console.log(`users:`,users)

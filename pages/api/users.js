@@ -11,7 +11,7 @@ const handler = nextConnect();
 handler.use(middleware);
 
 handler.post(async (req, res) => {
-  const { name, password, expertises, location } = req.body; //important!
+  const { name, password, expertises, location, username } = req.body;
 
   const email = normalizeEmail(req.body.email);
 
@@ -19,7 +19,7 @@ handler.post(async (req, res) => {
     res.status(400).send('The email you entered is invalid.');
     return;
   }
-  if (!password || !name) {
+  if (!password || !name || !username) {
     res.status(400).send('Missing field(s)');
     return;
   }
@@ -27,13 +27,19 @@ handler.post(async (req, res) => {
     res.status(403).send('The email has already been used.');
     return;
   }
+  if ((await req.db.collection('profiles').countDocuments({ username })) > 0) {
+    res.status(403).send('The username has already been used.');
+    return;
+  }
   const hashedPassword = await bcrypt.hash(password, 10);
   const user = await req.db
     .collection('profiles')
     .insertOne({
       _id: nanoid(12),
+      username,
       email,
       password: hashedPassword,
+      createdAt: new Date(),
       name,
       expertises,
       location,

@@ -11,5 +11,3 @@ export function useUser(id) {
   const { data } = useSWR(`/api/users/${id}`, fetcher);
   return data?.user;
 }
-
-

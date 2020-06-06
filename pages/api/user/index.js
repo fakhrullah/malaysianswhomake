@@ -37,7 +37,7 @@ handler.patch(upload.single('profilePicture'), async (req, res) => {
     });
     profilePicture = image.secure_url;
   }
-  const { name, bio, location, expertises, link_website, link_portfolio, link_twitter, 
+  const { name, username, bio, createdAt, location, expertises, link_website, link_portfolio, link_twitter, 
     link_github, link_linkedin, link_instagram, link_behance, link_dribbble, link_medium 
   } = req.body;
   await req.db.collection('profiles').updateOne(
@@ -45,6 +45,8 @@ handler.patch(upload.single('profilePicture'), async (req, res) => {
     {
       $set: {
         ...(name && { name }),
+        createdAt: createdAt,
+        username: username || '',
         bio: bio || '',
         location: location || '',
         expertises: expertises || '',
@@ -61,7 +63,7 @@ handler.patch(upload.single('profilePicture'), async (req, res) => {
       },
     },
   );
-  res.json({ user: { name, profilePicture, bio, location, expertises, link_website, link_portfolio, 
+  res.json({ user: { username, name, profilePicture, createdAt, bio, location, expertises, link_website, link_portfolio, 
     link_twitter, link_github, link_linkedin, link_instagram, link_behance, link_dribbble, link_medium 
   } });
 });

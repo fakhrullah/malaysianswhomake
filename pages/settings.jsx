@@ -12,6 +12,7 @@ const ProfileSection = () => {
 
   const nameRef = useRef();
   const profilePictureRef = useRef();
+  const usernameRef = useRef();
   const emailRef = useRef();
   const locationRef = useRef();
   const bioRef = useRef();
@@ -41,6 +42,7 @@ const ProfileSection = () => {
 
   useEffect( () => {
     expertiseRefs.current.value = user.expertises || []; //TO-DO: fix this!
+    usernameRef.current.value = user.username || '';
     nameRef.current.value = user.name;
     emailRef.current.value = user.email;
     locationRef.current.value = user.location || '';
@@ -63,10 +65,11 @@ const ProfileSection = () => {
 
     const formData = new FormData();
     if (profilePictureRef.current.files[0]) { formData.append('profilePicture', profilePictureRef.current.files[0]); }
-    formData.append('expertises', newArray); //It sends array to string instead. Fix?
+    for (let i = 0; i < newArray.length; i++) {formData.append('expertises[]', newArray[i])};
     formData.append('name', nameRef.current.value);
     formData.append('location', locationRef.current.value);
     formData.append('bio', bioRef.current.value);
+    formData.append('username', usernameRef.current.value);
     formData.append('email', emailRef.current.value);
     formData.append('link_website', websiteRef.current.value);
     formData.append('link_portfolio', portfolioRef.current.value);
@@ -77,7 +80,6 @@ const ProfileSection = () => {
     formData.append('link_behance', behanceRef.current.value);
     formData.append('link_dribbble', dribbbleRef.current.value);
     formData.append('link_medium', mediumRef.current.value);
-
 
     const res = await fetch('/api/user', {
       method: 'PATCH',
@@ -194,6 +196,30 @@ const ProfileSection = () => {
               <option value="Terengganu">Terengganu</option>
               <option value="Kedah">Kedah</option>
             </select>
+          </div>
+          <div>
+            <label htmlFor="username" className="formlabel my-1">Username</label>
+            <input
+              required
+              id="username"
+              name="username"
+              type="text"
+              placeholder=""
+              ref={usernameRef}
+              className="forminput"
+            />
+          </div>
+          <div>
+            <label htmlFor="email" className="formlabel my-1">Email</label>
+            <input
+              required
+              id="email"
+              name="email"
+              type="email"
+              placeholder=""
+              ref={emailRef}
+              className="forminput"
+            />
           </div>
           <div>
             <label htmlFor="bio" className="formlabel my-1">Biography</label>
@@ -342,19 +368,7 @@ const ProfileSection = () => {
         </form>
 
         <form onSubmit={handleSubmitPasswordChange} className="pt-8">
-          <h3 className="pb-4">Security</h3>
-          <div>
-            <label htmlFor="email" className="formlabel my-1">Email</label>
-            <input
-              required
-              id="email"
-              name="email"
-              type="email"
-              placeholder=""
-              ref={emailRef}
-              className="forminput"
-            />
-          </div>
+          <h3 className="pb-4">Change password</h3>
           <div>
             <label htmlFor="oldpassword" className="formlabel my-1">Old Password</label>
             <input
