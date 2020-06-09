@@ -1,35 +1,27 @@
-import React from "react"
 import Layout from "../components/Layout"
-import MakerList2 from "../components/MakerList2"
-import FilterList2 from "../components/FilterList2"
 import Link from 'next/link'
-// import Pagination from "../components/Pagination"
+import useSWR from 'swr';
+import fetcher from '../lib/fetch';
+import MakerList from "../components/MakerList"
 
-function Home({onFilterChange, expertiseList }) {
+function Home() {
+
+  const { data, error } = useSWR(`/api/makerlist`, fetcher)
+  if (error) return <p>Failed to load</p>
+  if (!data) return <p>Loading</p>
+  const allUsers = data.users
+
   return (
     <Layout>
         <div className="container mx-auto px-24 pt-16 md:px-8 md:pt-36 sm:px-8 sm:pt-40">
           
           <div className="w-full text-center py-16 my-10 border-2">
             Discover talented, passionate Malaysians who always strive to create and build stuff.<br/>
-            Want to be part of this?<br/><br/>
+            Be a part of this now.<br/><br/>
             <Link href="/signup"><a className="btn btn-solid font-semibold md:text-s">Submit My Info</a></Link>
           </div>
-          
-          <div className="inline-grid grid-cols-4 gap-10 pb-16 md:grid-cols-3 md:gap-4 sm:flex">
-            <div className="col-span-1 md:col-span-1 sm:hidden">
-              <FilterList2 />
-              {/* <FilterList onChange={onFilterChange} expertiseList={expertiseList} /> */}
-            </div>
-            <div className="flex-row col-span-3 md:col-span-2 sm:flex-col sm:w-full">
-              <MakerList2 />
-              {/* <Pagination
-                  currentPage={currentPage}
-                  makerDirectory={makerList}
-                  onChange={setCurrentPage}
-              />  */}
-            </div>
-          </div>
+
+          <MakerList allUsers={allUsers} />
 
         </div>
     </Layout>
