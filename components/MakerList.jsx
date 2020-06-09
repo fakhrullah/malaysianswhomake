@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import chunk from "lodash/chunk";
 import Pagination, { PER_PAGE } from "./Pagination";
-import MakerCard from "./MakerCard2"
+import MakerCard from "./MakerCard"
 import FilterList from "./FilterList"
 import expList from '../lib/expertises.json'
 

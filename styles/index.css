@@ -106,6 +106,10 @@ svg {
   display: inline-block;
 }
 
+.social-icon {
+  display: inline;
+}
+
 .social-icon:hover circle{
   fill: #ffcc00;
 }
