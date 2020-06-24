@@ -25,19 +25,16 @@ export default ({ children }) => (
       <GoogleAnalytics />
     </Head>
 
-    <nav className="header fixed flex-row px-12 py-4 md:inline-block sm:inline-block">
-        <div className="w-1/3 sm:w-full">
-            {/* nothing here  */}
-        </div>
+    <nav className="header px-24 py-4 md:px-16 sm:inline-block sm:px-0">
 
-        <div className="w-1/3 align-middle text-center md:w-full sm:w-full sm:flex sm:justify-center">
-            <a href="/" className="font-bold text-24 md:text-l">
-              Malaysians Who Make
+        <div className="w-2/5 text-left md:w-full sm:w-full sm:flex sm:justify-center">
+            <a href="/" className="font-bold text-24 md:text-base">
+              🇲🇾 Malaysians Who Make
             </a>
         </div>
 
-        <div className="w-1/3 align-middle flex justify-end md:w-full md:justify-center 
-        md:pt-4 sm:w-full sm:justify-center sm:pt-6">
+        <div className="w-3/5 align-middle flex justify-end md:w-full
+        sm:w-full sm:justify-center sm:pt-6">
           <Link href="/about"><a className="btn font-semibold md:text-s">
             About
           </a></Link>

@@ -18,7 +18,8 @@
     "postcss-import": "^12.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "tabletop": "^1.6.3"
+    "tabletop": "^1.6.3",
+    "typewriter-effect": "^2.13.1"
   },
   "devDependencies": {
     "postcss-preset-env": "^6.7.0",

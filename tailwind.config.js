@@ -22,7 +22,7 @@ module.exports = {
       's': '0.875rem', //14px
       'base': '1rem',
       'l': '1.25rem', //20px
-      '24': '1.4rem',
+      '24': '1.2rem',
       'xl': '2rem', //32px
       'xxl': '2.25rem' //36px
     },
