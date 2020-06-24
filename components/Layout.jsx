@@ -16,8 +16,8 @@ export default ({ children }) => (
       <meta property="og:type" content="website" />
       <meta name="og:description" content="Malaysians Who Make is the place to discover talented makers, from artists, designers, writers to developers."/>
       <meta property="og:url" content="https://malaysianswhomake.com"/>
-      <meta property="og:image" content="https://i.ibb.co/47QNFCs/URL-image-preview.png" /> 
-      <meta property="twitter:image" content="https://i.ibb.co/47QNFCs/URL-image-preview.png" /> 
+      <meta property="og:image" content="https://i.ibb.co/yn9nd2B/URL-image-preview.png" /> 
+      <meta property="twitter:image" content="https://i.ibb.co/yn9nd2B/URL-image-preview.png" /> 
       
       <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700" rel="stylesheet"/>
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
@@ -25,7 +25,7 @@ export default ({ children }) => (
       <GoogleAnalytics />
     </Head>
 
-    <nav className="fixed z-10 flex-row header px-12 py-6 md:inline-block sm:inline-block sm:py-4">
+    <nav className="header fixed flex-row px-12 py-4 md:inline-block sm:inline-block">
         <div className="w-1/3 sm:w-full">
             {/* nothing here  */}
         </div>

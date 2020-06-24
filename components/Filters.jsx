@@ -1,7 +1,8 @@
 import React from "react";
 
 const FilterList = ({ expertiseList, onChange = () => {} }) => (
-    <div className="sticky top-8 h-screen overflow-y-scroll pb-10 md:top-11">
+    <div className="sticky top-8 h-screen pb-10 md:top-11">
+      <div className="scrollwrapper overflow-y-auto">
 
         <div className="font-semibold leading-5 pb-8">
         Discover talented, passionate Malaysians who always strive 
@@ -34,6 +35,7 @@ const FilterList = ({ expertiseList, onChange = () => {} }) => (
             ))}
         </div>
     </div>
+  </div>
 );
 
 export default FilterList;

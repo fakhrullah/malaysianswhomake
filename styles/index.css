@@ -5,9 +5,10 @@
 .header {
   display: flex;
   width: 100%;
-  padding-top: 2rem;
+  padding-top: 1rem;
   color: #000;
   background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 21px 0px;
   align-items: center;
   z-index: 100;
 }
@@ -71,6 +72,10 @@ button:focus, input:focus {
   font-size: 1.25rem;
 }
 
+.scrollwrapper {
+  height: 75vh;
+}
+
 svg {
   display: inline-block;
 }
@@ -105,7 +110,7 @@ input:checked + svg {
 }
 
 .makerImage {
-  filter: grayscale(100%);
+  filter: grayscale(80%);
 }
 
 .makerImage:hover {
