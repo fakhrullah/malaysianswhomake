@@ -4,12 +4,12 @@ const FilterList = ({ expertiseList, onChange = () => {} }) => (
     <div className="sticky top-8 h-screen pb-10 md:top-11">
       <div className="scrollwrapper overflow-y-auto">
 
-        <div className="font-semibold leading-5 pb-8">
+        {/* <div className="font-semibold leading-5 pb-8">
         Discover talented, passionate Malaysians who always strive 
         to create &amp; build stuff. Want to be part of this?&nbsp;
         <a href="https://forms.gle/tGzbZJaden9ZCSZe7/" className="underline">
           Submit</a> your info in 30 secs.
-        </div>
+        </div> */}
 
         <div className="pb-6">
           <h3 className="pb-2">Expertise</h3>
